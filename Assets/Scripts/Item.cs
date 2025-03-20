@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public float floatSpeed = 5f;
-    public float floatHeight = 0.5f;
+    public float floatSpeed;
+    public float floatHeight;
     public Sprite spriteSelec;
 
     private Sprite spriteBase;
@@ -19,6 +19,8 @@ public class Item : MonoBehaviour
         startPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteBase = spriteRenderer.sprite;
+
+        enabled = false;
     }
 
     void Update()
@@ -35,6 +37,8 @@ public class Item : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            enabled = true;
+            
             playerNearby = true;
             timeCounter = -Mathf.PI / 2;
             spriteRenderer.sprite = spriteSelec;
@@ -45,6 +49,8 @@ public class Item : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            enabled = false;
+
             playerNearby = false;
             timeCounter = 0;
             transform.position = startPosition;
