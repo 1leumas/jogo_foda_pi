@@ -17,20 +17,14 @@ MonoBehaviour:
   sentence: 
   dialogues:
   - actorName: Fantasmoso
-    profile: {fileID: -1940738496428130850, guid: 2040530e1b3eb71478ff494a302b3ef0, type: 3}
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
       portuguese: UuUuUuUuuuu!
-      english: UuUuUuUuuuu!
-      spanish: UuUuUuUuuuu!
   - actorName: Fantasmoso
-    profile: {fileID: -1940738496428130850, guid: 2040530e1b3eb71478ff494a302b3ef0, type: 3}
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
       portuguese: Eu sou o Fantasmosooooo
-      english: Im am the Fantasmosooooo
-      spanish: Yo soy el Fantasmosooooo
-  - actorName: Fantasmoso
-    profile: {fileID: -1940738496428130850, guid: 2040530e1b3eb71478ff494a302b3ef0, type: 3}
+  - actorName: Mano de terno
+    profile: {fileID: 21300000, guid: c63a68553cc4c8848897ece5247a0f8c, type: 3}
     sentence:
-      portuguese: Tchau
-      english: Bye
-      spanish: Adios
+      portuguese: Garai

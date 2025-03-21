@@ -3,6 +3,10 @@
         {
             "key": "playerName",
             "value": "Pedro"
+        },
+        {
+            "key": "playerPosition",
+            "value": "(0.00, 0.00, -2.00)"
         }
     ]
 }

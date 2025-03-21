@@ -9,9 +9,7 @@ public class DialogueControl : MonoBehaviour
     [System.Serializable]
     public enum idiom
     {
-        pt,
-        en,
-        sp
+        pt
     }
 
     public idiom language;
@@ -21,7 +19,7 @@ public class DialogueControl : MonoBehaviour
     public Image profileSprite;
     public TextMeshProUGUI speechText;
     public Button skipButton;
-    public Text actorNametext;
+    public TextMeshProUGUI actorNametext;
 
     [Header("Settings")]
     public float typingSpeed;

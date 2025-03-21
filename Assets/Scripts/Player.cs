@@ -5,7 +5,6 @@ public class Player : MonoBehaviour
 {
     public float moveSpeed; // Velocidade do personagem
     private float initialMoveSpeed; // Velocidade inicial do personagem
-    private Rigidbody2D rb;
     private Vector3 moveInput;
     private bool _isTalking;
 
@@ -13,8 +12,10 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         initialMoveSpeed = moveSpeed;
+
+        string vectorString = SaveSystem.Instance.GetValue<string>("playerPosition"); // Initial position = (0, 0, -2)
+        transform.position = StringToVector3(vectorString);
     }
 
     private void Update()
@@ -36,5 +37,24 @@ public class Player : MonoBehaviour
     {
         // Como Rigidbody2D não aceita Z, usamos transform.position
         transform.position += moveInput * moveSpeed * Time.fixedDeltaTime;
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveSystem.Instance.SetValue("playerPosition", transform.position);
+    }
+
+    Vector3 StringToVector3(string str)
+    {
+        // Remove parênteses e divide a string pelos separadores ", "
+        str = str.Trim('(', ')');
+        string[] values = str.Split(',');
+
+        // Converte os valores para float e retorna um Vector3
+        return new Vector3(
+            float.Parse(values[0], System.Globalization.CultureInfo.InvariantCulture),
+            float.Parse(values[1], System.Globalization.CultureInfo.InvariantCulture),
+            float.Parse(values[2], System.Globalization.CultureInfo.InvariantCulture)
+        );
     }
 }

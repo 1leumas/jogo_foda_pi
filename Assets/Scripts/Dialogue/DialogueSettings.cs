@@ -28,8 +28,6 @@ public class Sentences
 public class Languages
 {
     public string portuguese;
-    public string english;
-    public string spanish;
 }
 
 #if UNITY_EDITOR
