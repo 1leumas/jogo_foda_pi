@@ -27,6 +27,8 @@ public class DialogueControl : MonoBehaviour
     private bool isShowing;
     private int index;
     private string[] sentences;
+    private string[] names;
+    private Sprite[] profiles;
     private Player player;
 
     public static DialogueControl instance;
@@ -60,27 +62,40 @@ public class DialogueControl : MonoBehaviour
         {
             index++;
             speechText.text = "";
+            actorNametext.text = null;
+            profileSprite.sprite = null;
             skipButton.gameObject.SetActive(false);
             StartCoroutine(TypeSentence());
+            actorNametext.text = names[index];
+            profileSprite.sprite = profiles[index];
         }
         else
         {
             speechText.text = "";
+            actorNametext.text = null;
+            profileSprite.sprite = null;
             index = 0;
             dialogueObj.SetActive(false);
             sentences = null;
             IsShowing = false;
             player.IsTalking = false;
+            player.joystick.OnPointerUp(null);
         }
     }
 
-    public void Speech(string[] txt)
+    public void Speech(string[] txt, string[] name, Sprite[] img)
     {
         if (!IsShowing)
         {
             dialogueObj.SetActive(true);
             sentences = txt;
+            names = name;
+            profiles = img;
+            skipButton.gameObject.SetActive(false);
+
             StartCoroutine(TypeSentence());
+            actorNametext.text = names[index];
+            profileSprite.sprite = profiles[index];
             IsShowing = true;
             player.IsTalking = true;
         }

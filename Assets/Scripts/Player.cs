@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed; // Velocidade do personagem
-    private float initialMoveSpeed; // Velocidade inicial do personagem
+    public float moveSpeed;
+    public DynamicJoystick joystick;
+    private float initialMoveSpeed;
     private Vector3 moveInput;
     private bool _isTalking;
 
@@ -20,14 +21,19 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (IsTalking) {
+        if (IsTalking)
+        {
+            joystick.gameObject.SetActive(false);
             moveSpeed = 0;
-        } else {
+        }
+        else
+        {
+            joystick.gameObject.SetActive(true);
             moveSpeed = initialMoveSpeed;
         }
         // Captura o input no eixo X (A/D) e no eixo Z (W/S)
-        float moveX = Input.GetAxisRaw("Horizontal"); // A/D (←/→)
-        float moveZ = Input.GetAxisRaw("Vertical");   // W/S (↑/↓)
+        float moveX = joystick.Horizontal; // A/D (←/→)
+        float moveZ = joystick.Vertical; // W/S (↑/↓)
 
         // Cria o vetor de movimento corretamente no espaço 3D (X e Z)
         moveInput = new Vector3(moveX, 0f, moveZ).normalized;
