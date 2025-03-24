@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public DynamicJoystick joystick;
     private float initialMoveSpeed;
     private Vector3 moveInput;
+    private GameObject flashlight;
     private bool _isTalking;
 
     public bool IsTalking { get => _isTalking; set => _isTalking = value; }
@@ -14,6 +15,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         initialMoveSpeed = moveSpeed;
+        flashlight = transform.Find("Light")?.gameObject;
 
         string vectorString = SaveSystem.Instance.GetValue<string>("playerPosition"); // Initial position = (0, 0, -2)
         transform.position = StringToVector3(vectorString);
@@ -37,6 +39,12 @@ public class Player : MonoBehaviour
 
         // Cria o vetor de movimento corretamente no espaço 3D (X e Z)
         moveInput = new Vector3(moveX, 0f, moveZ).normalized;
+
+        if (flashlight.activeSelf && moveInput.magnitude > 0.1f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(moveInput);
+            flashlight.transform.rotation = Quaternion.Slerp(flashlight.transform.rotation, targetRotation, Time.deltaTime * 10f);
+        }
     }
 
     private void FixedUpdate()

@@ -12,6 +12,7 @@ public class NPC_Dialogue : MonoBehaviour
     private List<string> sentences = new List<string>();
     private List<string> names = new List<string>();
     private List<Sprite> profiles = new List<Sprite>();
+    private Collider[] hit;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,9 +39,9 @@ public class NPC_Dialogue : MonoBehaviour
     }
 
     void ShowDialogue()
-    {
-        Collider[] hit = Physics.OverlapSphere(transform.position, dialogueRange, playerLayer);
-
+    {  
+        hit = Physics.OverlapSphere(transform.position, dialogueRange, playerLayer);
+        
         if (hit.Length > 0)
         {
             playerHit = true;
