@@ -8,12 +8,16 @@ public class Player : MonoBehaviour
     private float initialMoveSpeed;
     private Vector3 moveInput;
     private GameObject flashlight;
+    private Rigidbody rb;
     private bool _isTalking;
 
     public bool IsTalking { get => _isTalking; set => _isTalking = value; }
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+
         initialMoveSpeed = moveSpeed;
         flashlight = transform.Find("Light")?.gameObject;
 
@@ -49,8 +53,11 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Como Rigidbody2D não aceita Z, usamos transform.position
-        transform.position += moveInput * moveSpeed * Time.fixedDeltaTime;
+        if (moveInput.magnitude > 0.01f) // Apenas move se houver entrada
+        {
+            Vector3 newPosition = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
+            rb.MovePosition(newPosition);
+        }
     }
 
     private void OnApplicationQuit()

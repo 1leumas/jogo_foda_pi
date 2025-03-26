@@ -23,12 +23,8 @@ MonoBehaviour:
   - actorName: Fantasmoso
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: Eu sou o Fantasmosooooo
-  - actorName: Alek
+      portuguese: Viado
+  - actorName: Mano de terno
     profile: {fileID: 21300000, guid: c63a68553cc4c8848897ece5247a0f8c, type: 3}
     sentence:
       portuguese: Garai
-  - actorName: Fantasmoso
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "As fuma\xE7as falar\xE3o por mim"
