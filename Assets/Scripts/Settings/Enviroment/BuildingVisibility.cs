@@ -4,6 +4,7 @@ public class BuildingVisibility : MonoBehaviour
 {
     public GameObject[] walls;
     public GameObject[] roofs;
+    public GameObject floorsParent;
 
     public Terrain terrain;
     public Material darkMat;
@@ -11,11 +12,14 @@ public class BuildingVisibility : MonoBehaviour
     public Transform player;
 
     private bool isInsideBuilding = false;
-    private Material originalMat;
+    private static int activeBuildings = 0;
+    private static Material originalMat;
 
-    void Start() {
+    void Start()
+    {
         originalMat = terrain.materialTemplate;
     }
+
     void Update()
     {
         CheckIfPlayerIsInside();
@@ -23,19 +27,17 @@ public class BuildingVisibility : MonoBehaviour
 
     void CheckIfPlayerIsInside()
     {
-        if (player == null) return; // Segurança para evitar erro
 
         RaycastHit hit;
-
         Vector3 rayOrigin = player.position + Vector3.up * 0.5f;
 
-        // Dispara o Raycast para baixo a partir do Player
-        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 2f, buildingFloorLayer))
+        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 2f, buildingFloorLayer) && IsHitAChildOfFloors(hit.collider.gameObject))
         {
             if (!isInsideBuilding)
             {
                 SetBuildingVisibility(false);
                 isInsideBuilding = true;
+                UpdateTerrainMaterial(1);
             }
         }
         else
@@ -44,8 +46,21 @@ public class BuildingVisibility : MonoBehaviour
             {
                 SetBuildingVisibility(true);
                 isInsideBuilding = false;
+                UpdateTerrainMaterial(-1);
             }
         }
+    }
+
+    bool IsHitAChildOfFloors(GameObject hitObject)
+    {
+        foreach (Transform child in floorsParent.transform)
+        {
+            if (hitObject == child.gameObject)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     void SetBuildingVisibility(bool isVisible)
@@ -55,7 +70,6 @@ public class BuildingVisibility : MonoBehaviour
             foreach (GameObject wall in walls)
             {
                 wall.transform.position = new Vector3(wall.transform.position.x, 0, wall.transform.position.z);
-                terrain.materialTemplate = originalMat;
             }
         }
         else
@@ -63,7 +77,6 @@ public class BuildingVisibility : MonoBehaviour
             foreach (GameObject wall in walls)
             {
                 wall.transform.position -= new Vector3(0, 5.5f, 0);
-                terrain.materialTemplate = darkMat;
             }
         }
 
@@ -73,7 +86,15 @@ public class BuildingVisibility : MonoBehaviour
         }
     }
 
-    // Visualiza o Raycast na Scene para debug
+    void UpdateTerrainMaterial(int change)
+    {
+        activeBuildings += change;
+        if (terrain != null)
+        {
+            terrain.materialTemplate = (activeBuildings > 0) ? darkMat : originalMat;
+        }
+    }
+
     void OnDrawGizmos()
     {
         if (player != null)
