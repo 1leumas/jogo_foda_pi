@@ -163,45 +163,45 @@ MonoBehaviour:
   - m_Vertices: 0b0000000e00000012000000
   m_SharedTextures: []
   m_Positions:
-  - {x: -5, y: -5, z: 0.5}
-  - {x: 5, y: -5, z: 0.5}
-  - {x: -5, y: 5, z: 0.5}
-  - {x: 5, y: 5, z: 0.5}
-  - {x: 5, y: -5, z: 0.5}
-  - {x: 5, y: -5, z: -0.5}
-  - {x: 5, y: 5, z: 0.5}
-  - {x: 5, y: 5, z: -0.5}
-  - {x: 5, y: -5, z: -0.5}
-  - {x: -5, y: -5, z: -0.5}
-  - {x: 5, y: 5, z: -0.5}
-  - {x: -5, y: 5, z: -0.5}
-  - {x: -5, y: -5, z: -0.5}
-  - {x: -5, y: -5, z: 0.5}
-  - {x: -5, y: 5, z: -0.5}
-  - {x: -5, y: 5, z: 0.5}
-  - {x: -5, y: 5, z: 0.5}
-  - {x: 5, y: 5, z: 0.5}
-  - {x: -5, y: 5, z: -0.5}
-  - {x: 5, y: 5, z: -0.5}
-  - {x: -5, y: -5, z: -0.5}
-  - {x: 5, y: -5, z: -0.5}
-  - {x: -5, y: -5, z: 0.5}
-  - {x: 5, y: -5, z: 0.5}
+  - {x: -5, y: -3, z: 0.5}
+  - {x: 5, y: -3, z: 0.5}
+  - {x: -5, y: 3, z: 0.5}
+  - {x: 5, y: 3, z: 0.5}
+  - {x: 5, y: -3, z: 0.5}
+  - {x: 5, y: -3, z: -0.5}
+  - {x: 5, y: 3, z: 0.5}
+  - {x: 5, y: 3, z: -0.5}
+  - {x: 5, y: -3, z: -0.5}
+  - {x: -5, y: -3, z: -0.5}
+  - {x: 5, y: 3, z: -0.5}
+  - {x: -5, y: 3, z: -0.5}
+  - {x: -5, y: -3, z: -0.5}
+  - {x: -5, y: -3, z: 0.5}
+  - {x: -5, y: 3, z: -0.5}
+  - {x: -5, y: 3, z: 0.5}
+  - {x: -5, y: 3, z: 0.5}
+  - {x: 5, y: 3, z: 0.5}
+  - {x: -5, y: 3, z: -0.5}
+  - {x: 5, y: 3, z: -0.5}
+  - {x: -5, y: -3, z: -0.5}
+  - {x: 5, y: -3, z: -0.5}
+  - {x: -5, y: -3, z: 0.5}
+  - {x: 5, y: -3, z: 0.5}
   m_Textures0:
-  - {x: 10, y: -9}
-  - {x: 0, y: -9}
+  - {x: 10, y: -5}
+  - {x: 0, y: -5}
   - {x: 10, y: 1}
   - {x: 0, y: 1}
-  - {x: 1, y: -9}
-  - {x: 0, y: -9}
+  - {x: 1, y: -5}
+  - {x: 0, y: -5}
   - {x: 1, y: 1}
   - {x: 0, y: 1}
-  - {x: 10, y: -9}
-  - {x: 0, y: -9}
+  - {x: 10, y: -5}
+  - {x: 0, y: -5}
   - {x: 10, y: 1}
   - {x: 0, y: 1}
-  - {x: 1, y: -9}
-  - {x: 0, y: -9}
+  - {x: 1, y: -5}
+  - {x: 0, y: -5}
   - {x: 1, y: 1}
   - {x: 0, y: 1}
   - {x: 0, y: 1}
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 242
+  m_VersionIndex: 264
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Shape:
     rid: 5232663285408989395
   m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 230
-  m_Size: {x: 10, y: 10, z: 1}
+  m_UnmodifiedMeshVersion: 264
+  m_Size: {x: 10, y: 6, z: 1}
   m_LocalCenter: {x: 0, y: 0, z: 0}
   references:
     version: 2
@@ -349,5 +349,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000002, y: 10, z: 1.0000002}
+  m_Size: {x: 10.000002, y: 6, z: 1.0000002}
   m_Center: {x: 0, y: 0, z: 0}

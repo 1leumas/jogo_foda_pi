@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         flashlight = transform.Find("Light")?.gameObject;
 
         string vectorString = SaveSystem.Instance.GetValue<string>("playerPosition"); // Initial position = (0, 0, -2)
-        transform.position = StringToVector3(vectorString);
+        //transform.position = StringToVector3(vectorString);
     }
 
     private void Update()
@@ -44,10 +44,13 @@ public class Player : MonoBehaviour
         // Cria o vetor de movimento corretamente no espaço 3D (X e Z)
         moveInput = new Vector3(moveX, 0f, moveZ).normalized;
 
-        if (flashlight.activeSelf && moveInput.magnitude > 0.1f)
+        if (flashlight != null)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(moveInput);
-            flashlight.transform.rotation = Quaternion.Slerp(flashlight.transform.rotation, targetRotation, Time.deltaTime * 10f);
+            if (flashlight.activeSelf && moveInput.magnitude > 0.1f)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(moveInput);
+                flashlight.transform.rotation = Quaternion.Slerp(flashlight.transform.rotation, targetRotation, Time.deltaTime * 10f);
+            }
         }
     }
 

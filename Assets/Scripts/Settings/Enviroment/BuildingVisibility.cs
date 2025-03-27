@@ -48,14 +48,14 @@ public class BuildingVisibility : MonoBehaviour
         {
             foreach (GameObject wall in walls)
             {
-                wall.transform.position = new Vector3(0, 0, 0);
+                wall.transform.position = new Vector3(wall.transform.position.x, 0, wall.transform.position.z);
             }
         }
         else
         {
             foreach (GameObject wall in walls)
             {
-                wall.transform.position -= new Vector3(0, 9.5f, 0);
+                wall.transform.position -= new Vector3(0, 5.5f, 0);
             }
         }
 
