@@ -5,11 +5,17 @@ public class BuildingVisibility : MonoBehaviour
     public GameObject[] walls;
     public GameObject[] roofs;
 
-    public LayerMask buildingFloorLayer; // Layer do chão do prédio
-    public Transform player; // Referência ao Player (arraste no Inspector)
+    public Terrain terrain;
+    public Material darkMat;
+    public LayerMask buildingFloorLayer;
+    public Transform player;
 
     private bool isInsideBuilding = false;
+    private Material originalMat;
 
+    void Start() {
+        originalMat = terrain.materialTemplate;
+    }
     void Update()
     {
         CheckIfPlayerIsInside();
@@ -49,6 +55,7 @@ public class BuildingVisibility : MonoBehaviour
             foreach (GameObject wall in walls)
             {
                 wall.transform.position = new Vector3(wall.transform.position.x, 0, wall.transform.position.z);
+                terrain.materialTemplate = originalMat;
             }
         }
         else
@@ -56,6 +63,7 @@ public class BuildingVisibility : MonoBehaviour
             foreach (GameObject wall in walls)
             {
                 wall.transform.position -= new Vector3(0, 5.5f, 0);
+                terrain.materialTemplate = darkMat;
             }
         }
 

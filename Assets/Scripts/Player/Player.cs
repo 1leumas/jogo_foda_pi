@@ -37,12 +37,18 @@ public class Player : MonoBehaviour
             joystick.gameObject.SetActive(true);
             moveSpeed = initialMoveSpeed;
         }
-        // Captura o input no eixo X (A/D) e no eixo Z (W/S)
-        float moveX = joystick.Horizontal; // A/D (←/→)
-        float moveZ = joystick.Vertical; // W/S (↑/↓)
 
-        // Cria o vetor de movimento corretamente no espaço 3D (X e Z)
-        moveInput = new Vector3(moveX, 0f, moveZ).normalized;
+        float moveX = joystick.Horizontal;
+        float moveZ = joystick.Vertical;
+
+        Vector3 forward = Camera.main.transform.forward;
+        Vector3 right = Camera.main.transform.right;
+        forward.y = 0;
+        right.y = 0;
+        forward.Normalize();
+        right.Normalize();
+
+        moveInput = (forward * moveZ + right * moveX).normalized;
 
         if (flashlight != null)
         {
@@ -56,7 +62,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (moveInput.magnitude > 0.01f) // Apenas move se houver entrada
+        if (moveInput.magnitude > 0.01f)
         {
             Vector3 newPosition = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(newPosition);
@@ -70,11 +76,9 @@ public class Player : MonoBehaviour
 
     Vector3 StringToVector3(string str)
     {
-        // Remove parênteses e divide a string pelos separadores ", "
         str = str.Trim('(', ')');
         string[] values = str.Split(',');
 
-        // Converte os valores para float e retorna um Vector3
         return new Vector3(
             float.Parse(values[0], System.Globalization.CultureInfo.InvariantCulture),
             float.Parse(values[1], System.Globalization.CultureInfo.InvariantCulture),

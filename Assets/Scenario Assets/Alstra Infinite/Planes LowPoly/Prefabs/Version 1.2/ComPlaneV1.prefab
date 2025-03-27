@@ -27,10 +27,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335682057254649515}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 18, y: 18, z: 18}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1690038518404516336}
   - {fileID: 4612811790374668531}
@@ -73,7 +73,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d596354ffc21e542b03cceef355b950, type: 2}
+  - {fileID: -13878747981224875, guid: 638b987deaf0b364c9347a60fd0ed260, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 9013325485886657074}
   - component: {fileID: 9067106837048009105}
   - component: {fileID: 2421749109931917247}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Support (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1902,7 +1902,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 329
+  m_VersionIndex: 461
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2195,7 +2195,7 @@ GameObject:
   - component: {fileID: 237505718895431255}
   - component: {fileID: 2405077270782905545}
   - component: {fileID: 2568964346525133091}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3965,7 +3965,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 329
+  m_VersionIndex: 192
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
