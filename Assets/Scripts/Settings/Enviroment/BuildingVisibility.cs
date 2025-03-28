@@ -27,7 +27,6 @@ public class BuildingVisibility : MonoBehaviour
 
     void CheckIfPlayerIsInside()
     {
-
         RaycastHit hit;
         Vector3 rayOrigin = player.position + Vector3.up * 0.5f;
 
