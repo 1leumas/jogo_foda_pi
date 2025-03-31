@@ -49,6 +49,14 @@ public class Player : MonoBehaviour
         right.Normalize();
 
         moveInput = (forward * moveZ + right * moveX).normalized;
+        if (moveInput.magnitude <= 0f)
+        {
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
 
         if (flashlight != null)
         {
@@ -64,7 +72,15 @@ public class Player : MonoBehaviour
     {
         if (moveInput.magnitude > 0.01f)
         {
-            Vector3 newPosition = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
+            Vector3 adjustedMove = moveInput;
+
+            RaycastHit hit;
+            if (Physics.Raycast(rb.position, moveInput, out hit, 0.6f))
+            {
+                adjustedMove = Vector3.ProjectOnPlane(moveInput, hit.normal);
+            }
+
+            Vector3 newPosition = rb.position + adjustedMove * moveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(newPosition);
         }
     }
