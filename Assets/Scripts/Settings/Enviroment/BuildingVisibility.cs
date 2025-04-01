@@ -8,18 +8,10 @@ public class BuildingVisibility : MonoBehaviour
     public GameObject floorsParent;
 
     public Terrain terrain;
-    public Material darkMat;
     public LayerMask buildingFloorLayer;
     public Transform player;
 
     private bool isInsideBuilding = false;
-    private static int activeBuildings = 0;
-    private static Material originalMat;
-
-    void Start()
-    {
-        originalMat = terrain.materialTemplate;
-    }
 
     void Update()
     {
@@ -31,13 +23,12 @@ public class BuildingVisibility : MonoBehaviour
         RaycastHit hit;
         Vector3 rayOrigin = player.position + Vector3.up * 0.5f;
 
-        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 2f, buildingFloorLayer) && IsHitAChildOfFloors(hit.collider.gameObject))
+        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 5f, buildingFloorLayer) && IsHitAChildOfFloors(hit.collider.gameObject))
         {
             if (!isInsideBuilding)
             {
                 SetBuildingVisibility(false);
                 isInsideBuilding = true;
-                UpdateTerrainMaterial(1);
             }
         }
         else
@@ -46,7 +37,6 @@ public class BuildingVisibility : MonoBehaviour
             {
                 SetBuildingVisibility(true);
                 isInsideBuilding = false;
-                UpdateTerrainMaterial(-1);
             }
         }
     }
@@ -83,15 +73,6 @@ public class BuildingVisibility : MonoBehaviour
         foreach (GameObject roof in roofs)
         {
             roof.SetActive(isVisible);
-        }
-    }
-
-    void UpdateTerrainMaterial(int change)
-    {
-        activeBuildings += change;
-        if (terrain != null)
-        {
-            terrain.materialTemplate = (activeBuildings > 0) ? darkMat : originalMat;
         }
     }
 
