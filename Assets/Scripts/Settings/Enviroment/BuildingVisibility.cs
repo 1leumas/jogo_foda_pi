@@ -7,7 +7,6 @@ public class BuildingVisibility : MonoBehaviour
     public GameObject[] roofs;
     public GameObject floorsParent;
 
-    public Terrain terrain;
     public LayerMask buildingFloorLayer;
     public Transform player;
 
@@ -66,7 +65,7 @@ public class BuildingVisibility : MonoBehaviour
         {
             foreach (GameObject wall in walls)
             {
-                wall.transform.position -= new Vector3(0, 5.5f, 0);
+                wall.transform.position -= new Vector3(0, 6.5f, 0);
             }
         }
 
