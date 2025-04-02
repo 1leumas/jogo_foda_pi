@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 638b987deaf0b364c9347a60fd0ed260
+guid: 1657bf789360cc84d9a407900d2c929e
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -106,5 +106,5 @@ AssetOrigin:
   packageName: PolyPack Planes & Choppers - LowPoly 3D Models
   packageVersion: 1.2
   assetPath: Assets/Scenario Assets/Alstra Infinite/Planes LowPoly/Models/Version
-    1.2/ComPlaneV1.fbx
+    1.2/EaglePlane.fbx
   uploadId: 444371
