@@ -3,14 +3,13 @@ using UnityEngine;
 
 public class BuildingVisibility : MonoBehaviour
 {
-    public GameObject[] walls;
     public GameObject[] roofs;
     public GameObject floorsParent;
 
     public LayerMask buildingFloorLayer;
     public Transform player;
 
-    private bool isInsideBuilding = false;
+    public bool isInsideBuilding = false;
 
     void Update()
     {
@@ -22,7 +21,7 @@ public class BuildingVisibility : MonoBehaviour
         RaycastHit hit;
         Vector3 rayOrigin = player.position + Vector3.up * 0.5f;
 
-        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 5f, buildingFloorLayer) && IsHitAChildOfFloors(hit.collider.gameObject))
+        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 5f, buildingFloorLayer))
         {
             if (!isInsideBuilding)
             {
@@ -54,21 +53,6 @@ public class BuildingVisibility : MonoBehaviour
 
     void SetBuildingVisibility(bool isVisible)
     {
-        if (isVisible)
-        {
-            foreach (GameObject wall in walls)
-            {
-                wall.transform.position = new Vector3(wall.transform.position.x, 0, wall.transform.position.z);
-            }
-        }
-        else
-        {
-            foreach (GameObject wall in walls)
-            {
-                wall.transform.position -= new Vector3(0, 6.5f, 0);
-            }
-        }
-
         foreach (GameObject roof in roofs)
         {
             roof.SetActive(isVisible);

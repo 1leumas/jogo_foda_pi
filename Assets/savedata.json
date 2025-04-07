@@ -6,7 +6,11 @@
         },
         {
             "key": "playerPosition",
-            "value": "(114.80, 1.75, 8.05)"
+            "value": "(49.39, 1.76, 48.60)"
+        },
+        {
+            "key": "scene",
+            "value": "Game"
         }
     ]
 }

@@ -19,10 +19,10 @@ public class Player : MonoBehaviour
         rb.freezeRotation = true;
 
         initialMoveSpeed = moveSpeed;
-        flashlight = transform.Find("Light")?.gameObject;
+        flashlight = transform.Find("Light")?.gameObject;  
 
-        string vectorString = SaveSystem.Instance.GetValue<string>("playerPosition"); // Initial position = (0, 0, -2)
-        //transform.position = StringToVector3(vectorString);
+        string vectorString = SaveSystem.Instance.GetValue<string>("playerPosition");
+        transform.position = StringToVector3(vectorString);
     }
 
     private void Update()
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
         moveInput = (forward * moveZ + right * moveX).normalized;
         if (moveInput.magnitude <= 0f)
         {
-            rb.constraints = RigidbodyConstraints.FreezePosition;
+            rb.constraints = RigidbodyConstraints.FreezeAll;
         }
         else
         {
@@ -72,6 +72,9 @@ public class Player : MonoBehaviour
     {
         if (moveInput.magnitude > 0.01f)
         {
+            Quaternion targetRotation = Quaternion.LookRotation(moveInput);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 1f);
+
             Vector3 adjustedMove = moveInput;
 
             RaycastHit hit;
