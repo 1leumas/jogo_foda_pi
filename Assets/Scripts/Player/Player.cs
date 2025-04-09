@@ -1,4 +1,3 @@
-using Unity.Android.Gradle;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -73,7 +72,7 @@ public class Player : MonoBehaviour
         if (moveInput.magnitude > 0.01f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveInput);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 1f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * .75f);
 
             Vector3 adjustedMove = moveInput;
 

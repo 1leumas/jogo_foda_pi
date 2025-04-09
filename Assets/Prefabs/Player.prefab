@@ -44,10 +44,10 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.9150943, g: 0.8618725, b: 0.6863207, a: 1}
-  m_Intensity: 150
+  m_Intensity: 70
   m_Range: 50
   m_SpotAngle: 70
-  m_InnerSpotAngle: 60
+  m_InnerSpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -258,9 +258,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 4
-  m_CollisionDetection: 1
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
 --- !u!114 &2737917038870460911
 MonoBehaviour:
   m_ObjectHideFlags: 0

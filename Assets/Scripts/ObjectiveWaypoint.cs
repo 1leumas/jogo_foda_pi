@@ -20,10 +20,10 @@ public class ObjectiveWaypoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float minX = img.GetPixelAdjustedRect().width / 2;
+        float minX = 45;
         float maxX = Screen.width - minX;
 
-        float minY = img.GetPixelAdjustedRect().height / 2;
+        float minY = 55;
         float maxY = Screen.height - minY;
 
         Vector2 pos = Camera.main.WorldToScreenPoint(target.position + offset);
@@ -53,6 +53,6 @@ public class ObjectiveWaypoint : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         img.transform.position = pos;
-        meter.text = Vector3.Distance(target.position, player.transform.position).ToString("0") + "m";
+        meter.text = (Vector3.Distance(target.position, player.transform.position) / 2.5).ToString("0") + "m";
     }
 }
