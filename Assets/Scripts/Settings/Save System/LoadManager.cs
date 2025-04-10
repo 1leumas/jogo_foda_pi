@@ -40,7 +40,7 @@ public class SaveManager : MonoBehaviour
 
     private void ApplySavedData()
     {
-        // Adicione outras alterações aqui, como restaurar estados de inimigos, inventário, etc.
+        // Adicione alterações aqui, como restaurar estados de inimigos, inventário, etc.
     }
 
     private void OnApplicationQuit()

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b209b8e69b94b74fa933f1de930c698
+guid: 81252637d1b039049892f53b87139bed
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chat icon_0
+      name: Bag icon_0
       rect:
         serializedVersion: 2
         x: 0
@@ -138,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06fbb55779599934a9acdaa340e90771
-      internalID: -252265383
+      spriteID: d2d3de11a3f5d3842887ba8d25375b42
+      internalID: -779243645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chat icon_1
+      name: Bag icon_1
       rect:
         serializedVersion: 2
         x: 36
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80f49d5e95866f543adace601ec392b5
-      internalID: -1775797209
+      spriteID: 487162f8fdf191348b5e8d8760bac9de
+      internalID: 650659309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chat icon_2
+      name: Bag icon_2
       rect:
         serializedVersion: 2
         x: 72
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c7b303b3b692f94b94b658989b54108
-      internalID: 1860709486
+      spriteID: 14054f2ff949dba4b8fd1b7d266d4897
+      internalID: 1894068175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chat icon_3
+      name: Bag icon_3
       rect:
         serializedVersion: 2
         x: 108
@@ -204,8 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec0d2dc5d6bc34b4fb6cb9520fbeaa24
-      internalID: -1734273008
+      spriteID: ebf4d07a323a5b54c80ebdc11cac634e
+      internalID: 1063708456
       vertices: []
       indices: 
       edges: []
@@ -214,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d33b212cb32e5d84b9bac2675837655e
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -224,10 +224,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chat icon_0: -252265383
-      Chat icon_1: -1775797209
-      Chat icon_2: 1860709486
-      Chat icon_3: -1734273008
+      Bag icon_0: -779243645
+      Bag icon_1: 650659309
+      Bag icon_2: 1894068175
+      Bag icon_3: 1063708456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
