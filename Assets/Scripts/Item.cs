@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
     public LayerMask playerLayer;
     public Sprite spriteSelec;
 
+    private IconController iconCont;
     private Sprite spriteBase;
     private SpriteRenderer spriteRenderer;
     private bool playerNearby = false;
@@ -20,6 +21,7 @@ public class Item : MonoBehaviour
         startPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteBase = spriteRenderer.sprite;
+        iconCont = FindFirstObjectByType<IconController>();
     }
 
     void Update()
@@ -31,23 +33,14 @@ public class Item : MonoBehaviour
             timeCounter += Time.deltaTime * floatSpeed;
             float newY = startPosition.y + (Mathf.Sin(timeCounter) * 0.5f + 0.5f) * floatHeight;
             transform.position = new Vector3(startPosition.x, newY, startPosition.z);
-        }
-
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            ProcessTouch(touch.position);
-        }
-        else if (Input.GetMouseButtonDown(0))
-        {
-            ProcessTouch(Input.mousePosition);
+            iconCont.state = 2;
         }
     }
 
     void DetectPlayer()
     {
         Collider[] hit = Physics.OverlapSphere(transform.position, dialogueRange, playerLayer);
-        
+
         if (hit.Length > 0 && !playerNearby)
         {
             playerNearby = true;
@@ -62,19 +55,10 @@ public class Item : MonoBehaviour
         }
     }
 
-    void ProcessTouch(Vector2 touchPosition)
+    public void PickItem()
     {
-        Ray ray = Camera.main.ScreenPointToRay(touchPosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.collider.gameObject == gameObject && playerNearby)
-            {
-                Inventory.Instance.hasFlashlight = true;
-                Destroy(gameObject);
-            }
-        }
+        Inventory.Instance.hasFlashlight = true;
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()

@@ -9,28 +9,19 @@ public class NPC_Dialogue : MonoBehaviour
     public DialogueSettings dialogue;
     public bool playerHit;
 
+    private IconController iconCont;
     private List<string> sentences = new List<string>();
     private List<string> names = new List<string>();
     private List<Sprite> profiles = new List<Sprite>();
-    private Collider[] hit;
+    public Collider[] hit;
+    private string npcTag;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         GetNPCInfo();
-    }
-
-    void Update()
-    {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            ProcessTouch(touch.position);
-        }
-        else if (Input.GetMouseButtonDown(0))
-        {
-            ProcessTouch(Input.mousePosition);
-        }
+        iconCont = FindFirstObjectByType<IconController>();
+        npcTag = gameObject.tag;
     }
 
     void FixedUpdate()
@@ -45,25 +36,19 @@ public class NPC_Dialogue : MonoBehaviour
         if (hit.Length > 0)
         {
             playerHit = true;
+            iconCont.state = 1;
+            iconCont.npc = npcTag;
         }
         else
         {
             playerHit = false;
+            iconCont.state = 0;
         }
     }
 
-    void ProcessTouch(Vector2 touchPosition)
+    public void StartDialogue()
     {
-        Ray ray = Camera.main.ScreenPointToRay(touchPosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.collider.gameObject == gameObject && playerHit)
-            {
-                DialogueControl.instance.Speech(sentences.ToArray(), names.ToArray(), profiles.ToArray());
-            }
-        }
+        DialogueControl.instance.Speech(sentences.ToArray(), names.ToArray(), profiles.ToArray());
     }
 
     void GetNPCInfo()
