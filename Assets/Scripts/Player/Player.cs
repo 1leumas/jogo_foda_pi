@@ -18,10 +18,7 @@ public class Player : MonoBehaviour
         rb.freezeRotation = true;
 
         initialMoveSpeed = moveSpeed;
-        flashlight = transform.Find("Light")?.gameObject;  
-
-        string vectorString = SaveSystem.Instance.GetValue<string>("playerPosition");
-        transform.position = StringToVector3(vectorString);
+        flashlight = transform.Find("Light")?.gameObject;
     }
 
     private void Update()
@@ -87,9 +84,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnApplicationQuit()
+    public void SetTalking(bool value)
     {
-        SaveSystem.Instance.SetValue("playerPosition", transform.position);
+        IsTalking = value;
     }
 
     Vector3 StringToVector3(string str)

@@ -4,6 +4,7 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory Instance { get; private set; }
     public bool hasFlashlight;
+    public int fuses;
 
     private GameObject flashLight;
 

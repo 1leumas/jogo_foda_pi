@@ -8,7 +8,8 @@ public class ObjectiveWaypoint : MonoBehaviour
     public Image img;
     public Transform target;
     public TextMeshProUGUI meter;
-    public Vector3 offset;
+    public float minX;
+    public float minY;
 
     private Player player;
 
@@ -20,13 +21,11 @@ public class ObjectiveWaypoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float minX = 45;
         float maxX = Screen.width - minX;
 
-        float minY = 55;
         float maxY = Screen.height - minY;
 
-        Vector2 pos = Camera.main.WorldToScreenPoint(target.position + offset);
+        Vector2 pos = Camera.main.WorldToScreenPoint(target.position);
 
         if (Vector3.Dot(target.position - transform.position, transform.forward) < 0)
         {

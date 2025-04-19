@@ -17,10 +17,11 @@ public class DialogueControl : MonoBehaviour
     [Header("Components")]
     public GameObject dialogueObj;
     public Image profileSprite;
+    public Image Waypoint;
     public TextMeshProUGUI speechText;
     public TextMeshProUGUI actorNametext;
     public Button skipButton;
-    public Button actionButton;
+    public Button speechButton;
 
     [Header("Settings")]
     public float typingSpeed;
@@ -80,8 +81,9 @@ public class DialogueControl : MonoBehaviour
             sentences = null;
             IsShowing = false;
             player.IsTalking = false;
-            player.joystick.OnPointerUp(null);
-            actionButton.gameObject.SetActive(true);
+            player.joystick.OnPointerUp(null);    
+            speechButton.gameObject.SetActive(true);           
+            Waypoint.gameObject.SetActive(true);
         }
     }
 
@@ -94,7 +96,8 @@ public class DialogueControl : MonoBehaviour
             names = name;
             profiles = img;
             skipButton.gameObject.SetActive(false);
-            actionButton.gameObject.SetActive(false);
+            speechButton.gameObject.SetActive(false);
+            Waypoint.gameObject.SetActive(false);
 
             StartCoroutine(TypeSentence());
             actorNametext.text = names[index];

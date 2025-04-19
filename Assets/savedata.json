@@ -6,7 +6,15 @@
         },
         {
             "key": "playerPosition",
-            "value": "(35.46, 1.76, 11.65)"
+            "value": "(114.90, 1.80, 2.30)"
+        },
+        {
+            "key": "flashLight",
+            "value": "True"
+        },
+        {
+            "key": "fuses",
+            "value": "0"
         },
         {
             "key": "scene",
