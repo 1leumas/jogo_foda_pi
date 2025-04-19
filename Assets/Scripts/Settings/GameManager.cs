@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     public Vector3 playerPosition;
     public int fuses;
     public int gameState;
+    public bool hasFlashlight;
+
+    [HideInInspector] public bool firstStart = true;
 
     private void Awake()
     {

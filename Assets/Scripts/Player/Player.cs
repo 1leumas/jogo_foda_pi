@@ -19,6 +19,11 @@ public class Player : MonoBehaviour
 
         initialMoveSpeed = moveSpeed;
         flashlight = transform.Find("Light")?.gameObject;
+
+        if (GameManager.Instance != null && !GameManager.Instance.firstStart)
+        {
+            transform.position = GameManager.Instance.playerPosition;
+        }
     }
 
     private void Update()

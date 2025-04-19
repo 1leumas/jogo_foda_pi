@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6420170888913097662}
   - component: {fileID: 1620740994472320438}
   - component: {fileID: 5162399084365486258}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EaglePlane_LeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,12 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473827035137433765}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.00000005960465, z: -0, w: 1}
   m_LocalPosition: {x: -0.15794362, y: 0.0022565757, z: -0.1878592}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4913082653434189679}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1620740994472320438
 MeshFilter:
@@ -51,11 +52,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -92,8 +97,9 @@ GameObject:
   - component: {fileID: 4913082653434189679}
   - component: {fileID: 8322965685870991562}
   - component: {fileID: 6081524673656122368}
-  - component: {fileID: 7115075421154498211}
-  m_Layer: 0
+  - component: {fileID: 6172079803440091388}
+  - component: {fileID: 8248229607535958335}
+  m_Layer: 9
   m_Name: EaglePlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,17 +113,18 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5721003125740162517}
-  m_LocalRotation: {x: 0, y: 0.70710677, z: 0, w: 0.7071068}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5251638254733894833}
   - {fileID: 615010087132965700}
   - {fileID: 6420170888913097662}
   - {fileID: 8056250375173759593}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &8322965685870991562
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -137,15 +144,19 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 23f08860b16229545bce8aae76934ed8, type: 2}
+  - {fileID: -13878747981224875, guid: 1657bf789360cc84d9a407900d2c929e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,20 +178,52 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7115075421154498211
-MeshCollider:
+--- !u!136 &6172079803440091388
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5721003125740162517}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7290677456632681762, guid: 1657bf789360cc84d9a407900d2c929e, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.21
+  m_Height: 1.33
+  m_Direction: 0
+  m_Center: {x: 0.19, y: 0.1, z: 0.000000007893178}
+--- !u!136 &8248229607535958335
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721003125740162517}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11
+  m_Height: 1.56
+  m_Direction: 2
+  m_Center: {x: 0.01, y: 0.1941134, z: 0.000000007893178}
 --- !u!1 &7548437514625025048
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +235,7 @@ GameObject:
   - component: {fileID: 8056250375173759593}
   - component: {fileID: 4839794768926407607}
   - component: {fileID: 3822897197099816759}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EaglePlane_RightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,12 +249,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7548437514625025048}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.00000005960465, z: -0, w: 1}
   m_LocalPosition: {x: -0.15794362, y: 0.0022565757, z: 0.1878592}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4913082653434189679}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4839794768926407607
 MeshFilter:
@@ -232,11 +276,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -273,7 +321,7 @@ GameObject:
   - component: {fileID: 615010087132965700}
   - component: {fileID: 1222011947282299177}
   - component: {fileID: 7801818297547229228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EaglePlane_FrontPropeller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,12 +335,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7577544645469703758}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.00000005960465, z: -0, w: 1}
   m_LocalPosition: {x: -0.38820273, y: 0.21893072, z: 0.00012459213}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4913082653434189679}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1222011947282299177
 MeshFilter:
@@ -313,11 +362,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -354,7 +407,7 @@ GameObject:
   - component: {fileID: 5251638254733894833}
   - component: {fileID: 910163488958235678}
   - component: {fileID: 29212379481618036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EaglePlane_BackWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,12 +421,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8581226815463879221}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.00000005960465, z: -0, w: 1}
   m_LocalPosition: {x: 0.6969967, y: 0.118997246, z: 0.00018020981}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4913082653434189679}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &910163488958235678
 MeshFilter:
@@ -394,11 +448,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

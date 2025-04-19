@@ -17,6 +17,12 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         flashLight = transform.Find("Light").gameObject;
+
+        if (GameManager.Instance != null)
+        {
+            hasFlashlight = GameManager.Instance.hasFlashlight;
+            fuses = GameManager.Instance.fuses;
+        }
     }
 
     // Update is called once per frame
