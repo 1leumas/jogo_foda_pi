@@ -10,23 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e453bef00ae50c6479761df934291299, type: 3}
-  m_Name: Dialogue_Cutscene_01
+  m_Name: PlayerDialogue_1
   m_EditorClassIdentifier: 
   actor: {fileID: 0}
+  state: 0
   speakerSprite: {fileID: 0}
   sentence: 
   dialogues:
-  - actorName: Player
-    profile: {fileID: 21300000, guid: c63a68553cc4c8848897ece5247a0f8c, type: 3}
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
     sentence:
       portuguese: "Que horas s\xE3o? J\xE1 anoiteceu?"
-  - actorName: Player
-    profile: {fileID: 21300000, guid: c63a68553cc4c8848897ece5247a0f8c, type: 3}
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
     sentence:
       portuguese: "Caramba acho que fiquei muito tempo no banheiro. O museu j\xE1
         est\xE1 fechado."
-  - actorName: Player
-    profile: {fileID: 21300000, guid: c63a68553cc4c8848897ece5247a0f8c, type: 3}
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
     sentence:
       portuguese: "Espero que ainda tenha alguem aqui! Melhor eu ir l\xF3go para
         a sa\xEDda."

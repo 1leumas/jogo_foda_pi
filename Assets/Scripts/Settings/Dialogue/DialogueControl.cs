@@ -27,7 +27,9 @@ public class DialogueControl : MonoBehaviour
     public float typingSpeed;
 
     private bool isShowing;
+    private bool isPlayerDialogue;
     private int index;
+    private int state;
     private string[] sentences;
     private string[] names;
     private Sprite[] profiles;
@@ -81,13 +83,17 @@ public class DialogueControl : MonoBehaviour
             sentences = null;
             IsShowing = false;
             player.IsTalking = false;
-            player.joystick.OnPointerUp(null);    
-            speechButton.gameObject.SetActive(true);           
+            player.joystick.OnPointerUp(null);
+            if (!isPlayerDialogue)
+            {
+                speechButton.gameObject.SetActive(true);    
+            }       
             Waypoint.gameObject.SetActive(true);
+            GameManager.Instance.SetState(state + 1);
         }
     }
 
-    public void Speech(string[] txt, string[] name, Sprite[] img)
+    public void Speech(string[] txt, string[] name, Sprite[] img, int nextState, bool playerDialogue)
     {
         if (!IsShowing)
         {
@@ -95,6 +101,7 @@ public class DialogueControl : MonoBehaviour
             sentences = txt;
             names = name;
             profiles = img;
+            state = nextState;
             skipButton.gameObject.SetActive(false);
             speechButton.gameObject.SetActive(false);
             Waypoint.gameObject.SetActive(false);
@@ -104,6 +111,7 @@ public class DialogueControl : MonoBehaviour
             profileSprite.sprite = profiles[index];
             IsShowing = true;
             player.IsTalking = true;
+            isPlayerDialogue = playerDialogue;
         }
     }
 }

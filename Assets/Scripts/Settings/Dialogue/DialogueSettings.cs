@@ -7,6 +7,7 @@ public class DialogueSettings : ScriptableObject
 {
     [Header("Settings")]
     public GameObject actor;
+    public int state;
 
     [Header("Dialogue")]
     public Sprite speakerSprite;

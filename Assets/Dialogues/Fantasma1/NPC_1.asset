@@ -13,18 +13,15 @@ MonoBehaviour:
   m_Name: NPC_1
   m_EditorClassIdentifier: 
   actor: {fileID: 0}
+  state: 1
   speakerSprite: {fileID: 0}
   sentence: 
   dialogues:
-  - actorName: Fantasmoso
+  - actorName: NPC_1
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: UuUuUuUuuuu!
-  - actorName: Fantasmoso
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+      portuguese: Insira aqui o dialogo do npc
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
     sentence:
-      portuguese: Viado
-  - actorName: Mano de terno
-    profile: {fileID: 21300000, guid: c63a68553cc4c8848897ece5247a0f8c, type: 3}
-    sentence:
-      portuguese: Garai
+      portuguese: Insira aqui a resposta do jogador

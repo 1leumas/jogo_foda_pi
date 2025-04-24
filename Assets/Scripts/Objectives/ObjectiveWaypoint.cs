@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ObjectiveWaypoint : MonoBehaviour
 {
-    public Image img;
+    public GameObject waypoint;
     public Transform target;
     public TextMeshProUGUI meter;
     public float minX;
@@ -21,6 +21,17 @@ public class ObjectiveWaypoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.gameState == 0)
+        {
+            waypoint.SetActive(false);
+        }
+        else
+        {
+            waypoint.SetActive(true);
+        }
+        
+        target = ObjectiveManager.Instance.GetObjetivoPorId(GameManager.Instance.gameState);
+
         float maxX = Screen.width - minX;
 
         float maxY = Screen.height - minY;
@@ -51,7 +62,7 @@ public class ObjectiveWaypoint : MonoBehaviour
         pos.x = Mathf.Clamp(pos.x, minX, maxX);
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
-        img.transform.position = pos;
+        waypoint.transform.position = pos;
         meter.text = (Vector3.Distance(target.position, player.transform.position) / 2.5).ToString("0") + "m";
     }
 }

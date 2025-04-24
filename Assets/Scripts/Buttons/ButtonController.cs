@@ -5,7 +5,7 @@ public class ButtonController : MonoBehaviour
 {
     public static ButtonController Instance { get; private set; }
 
-    private Dictionary<string, GameObject> botoes = new Dictionary<string, GameObject>();
+    private Dictionary<string, GameObject> btns = new Dictionary<string, GameObject>();
 
     private void Awake()
     {
@@ -17,10 +17,10 @@ public class ButtonController : MonoBehaviour
         Instance = this;
 
         // Pega todos os botões filhos automaticamente
-        botoes.Clear();
+        btns.Clear();
         foreach (Transform child in transform)
         {
-            botoes[child.gameObject.name] = child.gameObject;
+            btns[child.gameObject.name] = child.gameObject;
         }
 
         DeactivateBtn();
@@ -28,7 +28,7 @@ public class ButtonController : MonoBehaviour
 
     public void DeactivateBtn()
     {
-        foreach (var botao in botoes.Values)
+        foreach (var botao in btns.Values)
         {
             botao.SetActive(false);
         }
@@ -38,7 +38,7 @@ public class ButtonController : MonoBehaviour
     {
         DeactivateBtn();
 
-        if (botoes.TryGetValue(nameBtn, out GameObject botaoGO))
+        if (btns.TryGetValue(nameBtn, out GameObject botaoGO))
         {
             botaoGO.SetActive(true);
 

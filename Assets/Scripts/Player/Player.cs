@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (moveInput.magnitude > 0.01f)
+        if (moveInput.magnitude > 0.01f && !IsTalking)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveInput);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * .75f);

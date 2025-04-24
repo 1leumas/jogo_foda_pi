@@ -12,6 +12,7 @@ public class NPC_Dialogue : MonoBehaviour
     private List<string> sentences = new List<string>();
     private List<string> names = new List<string>();
     private List<Sprite> profiles = new List<Sprite>();
+    private int state;
     private Collider[] hit;
 
     void Start()
@@ -44,7 +45,7 @@ public class NPC_Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        DialogueControl.instance.Speech(sentences.ToArray(), names.ToArray(), profiles.ToArray());
+        DialogueControl.instance.Speech(sentences.ToArray(), names.ToArray(), profiles.ToArray(), state, false);
     }
 
     void GetNPCInfo()
@@ -54,6 +55,7 @@ public class NPC_Dialogue : MonoBehaviour
             sentences.Add(dialogue.dialogues[i].sentence.portuguese);
             names.Add(dialogue.dialogues[i].actorName);
             profiles.Add(dialogue.dialogues[i].profile);
+            state = dialogue.state;
         }
     }
 

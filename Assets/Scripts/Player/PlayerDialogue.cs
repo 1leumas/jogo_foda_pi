@@ -3,30 +3,57 @@ using System.Collections.Generic;
 
 public class PlayerDialogue : MonoBehaviour
 {
-    public DialogueSettings dialogue;
+    public List<DialogueSettings> allDialogues; // Lista com todos os diálogos possíveis
 
+    private DialogueSettings currentDialogue;
     private List<string> sentences = new List<string>();
     private List<string> names = new List<string>();
     private List<Sprite> profiles = new List<Sprite>();
+    private int state;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GetInfo();
+        UpdateDialogue();
+    }
+
+    void Update()
+    {
+        // Atualiza o diálogo sempre que o gameState mudar
+        if (currentDialogue == null || currentDialogue.state != GameManager.Instance.gameState)
+        {
+            UpdateDialogue();
+        }
+    }
+
+    void UpdateDialogue()
+    {
+        currentDialogue = allDialogues.Find(d => d.state == GameManager.Instance.gameState);
+
+        if (currentDialogue == null)
+        {
+            Debug.LogWarning("No dialogue found for state: " + GameManager.Instance.gameState);
+            return;
+        }
+
+        sentences.Clear();
+        names.Clear();
+        profiles.Clear();
+
+        for (int i = 0; i < currentDialogue.dialogues.Count; i++)
+        {
+            sentences.Add(currentDialogue.dialogues[i].sentence.portuguese);
+            names.Add(currentDialogue.dialogues[i].actorName);
+            profiles.Add(currentDialogue.dialogues[i].profile);
+        }
+
+        state = currentDialogue.state;
     }
 
     public void StartDialogue()
     {
-        DialogueControl.instance.Speech(sentences.ToArray(), names.ToArray(), profiles.ToArray());
-    }
-
-    void GetInfo()
-    {
-        for (int i = 0; i < dialogue.dialogues.Count; i++)
+        if (currentDialogue != null)
         {
-            sentences.Add(dialogue.dialogues[i].sentence.portuguese);
-            names.Add(dialogue.dialogues[i].actorName);
-            profiles.Add(dialogue.dialogues[i].profile);
+            DialogueControl.instance.Speech(sentences.ToArray(), names.ToArray(), profiles.ToArray(), state, true);
         }
     }
 }

@@ -10,22 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e453bef00ae50c6479761df934291299, type: 3}
-  m_Name: NPC_2
+  m_Name: PlayerDialogue_3
   m_EditorClassIdentifier: 
   actor: {fileID: 0}
   state: 2
   speakerSprite: {fileID: 0}
   sentence: 
   dialogues:
-  - actorName: Lobisome
-    profile: {fileID: 21300000, guid: e29614c530ef61d4d96332855bab33e0, type: 3}
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
     sentence:
-      portuguese: Aaaauuuuuuuuuuuuuuu
-  - actorName: Lobisome
-    profile: {fileID: 21300000, guid: e29614c530ef61d4d96332855bab33e0, type: 3}
-    sentence:
-      portuguese: Mim de!
-  - actorName: Alek
-    profile: {fileID: 21300000, guid: c63a68553cc4c8848897ece5247a0f8c, type: 3}
-    sentence:
-      portuguese: Garai
+      portuguese: aaaaaaaaaaaaaaaaaaaaaaa

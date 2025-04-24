@@ -23,4 +23,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void SetState(int state)
+    {
+        gameState = state;
+    }
 }
