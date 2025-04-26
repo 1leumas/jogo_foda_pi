@@ -4,15 +4,14 @@ public class GhostNPC : MonoBehaviour
 {
     public float floatSpeed;
     public float floatHeight;
-    private Vector3 startPosition;
+    private Vector3 startLocalPosition;
     private float timeCounter = 0;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        startPosition = transform.position;   
+        startLocalPosition = transform.localPosition;   
     }
 
-    // Update is called once per frame
     void Update()
     {
         moveUpDown();
@@ -20,7 +19,7 @@ public class GhostNPC : MonoBehaviour
 
     private void moveUpDown() {
         timeCounter += Time.deltaTime * floatSpeed;
-        float newY = startPosition.y + (Mathf.Sin(timeCounter) * 0.5f + 0.5f) * floatHeight;
-        transform.position = new Vector3(startPosition.x, newY, startPosition.z);
+        float newY = startLocalPosition.y + (Mathf.Sin(timeCounter) * 0.5f + 0.5f) * floatHeight;
+        transform.localPosition = new Vector3(startLocalPosition.x, newY, startLocalPosition.z);
     }
 }

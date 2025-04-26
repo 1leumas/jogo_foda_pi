@@ -1,5 +1,4 @@
 using UnityEditor;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 public class MinigameObject : MonoBehaviour
@@ -7,7 +6,7 @@ public class MinigameObject : MonoBehaviour
     public float playRange;
     public LayerMask playerLayer;
     public bool playerHit;
-    public SceneAsset gameScene;
+    public string gameScene;
 
     private Collider[] hit;
     [SerializeField] private bool activeLight;

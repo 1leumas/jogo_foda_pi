@@ -4,12 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class GameButton : MonoBehaviour, IButtonParameter
 {
-    private SceneAsset targetGame;
+    private string targetGame;
     public GameObject player;
 
     public void ReceiveParameter(object parameter)
     {
-        targetGame = parameter as SceneAsset;
+        targetGame = parameter as string;
 
         if (targetGame == null)
         {
@@ -25,7 +25,7 @@ public class GameButton : MonoBehaviour, IButtonParameter
             GameManager.Instance.fuses = Inventory.Instance.fuses;
             GameManager.Instance.hasFlashlight = Inventory.Instance.hasFlashlight;
             GameManager.Instance.firstStart = false;
-            SceneManager.LoadScene(targetGame.name);
+            SceneManager.LoadScene(targetGame);
         }
         else
         {

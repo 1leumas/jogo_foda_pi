@@ -29,5 +29,4 @@ MonoBehaviour:
   - actorName: Jogador
     profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
     sentence:
-      portuguese: "Espero que ainda tenha alguem aqui! Melhor eu ir l\xF3go para
-        a sa\xEDda."
+      portuguese: "Espero que ainda tenha alguem aqui! Melhor eu ir logo para a sa\xEDda."
