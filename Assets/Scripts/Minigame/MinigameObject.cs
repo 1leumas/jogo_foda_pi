@@ -7,9 +7,9 @@ public class MinigameObject : MonoBehaviour
     public LayerMask playerLayer;
     public bool playerHit;
     public string gameScene;
+    public int state;
 
     private Collider[] hit;
-    [SerializeField] private bool activeLight;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class MinigameObject : MonoBehaviour
     }
     void Update()
     {
-        if (activeLight == true)
+        if (state == GameManager.Instance.gameState)
         {
             transform.Find("Light").gameObject.SetActive(true);
             
@@ -41,11 +41,6 @@ public class MinigameObject : MonoBehaviour
 
             ButtonController.Instance.DeactivateBtn();
         }
-    }
-
-    public void StartMinigame()
-    {
-        //Minigame logic...
     }
 
     private void OnDrawGizmosSelected()

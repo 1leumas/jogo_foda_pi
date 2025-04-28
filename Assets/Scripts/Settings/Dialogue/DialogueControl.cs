@@ -22,6 +22,7 @@ public class DialogueControl : MonoBehaviour
     public TextMeshProUGUI actorNametext;
     public Button skipButton;
     public Button speechButton;
+    public GameObject guideGhost;
 
     [Header("Settings")]
     public float typingSpeed;
@@ -84,6 +85,10 @@ public class DialogueControl : MonoBehaviour
             IsShowing = false;
             player.IsTalking = false;
             player.joystick.OnPointerUp(null);
+            if (guideGhost.activeSelf)
+            {
+                guideGhost.SetActive(false);
+            }
             if (!isPlayerDialogue)
             {
                 speechButton.gameObject.SetActive(true);    

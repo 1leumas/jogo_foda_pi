@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 416599f7d02beb1419885662cdd30f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laodingScreen: {fileID: 727385831}
+  loadingScreen: {fileID: 727385831}
   slider: {fileID: 569937411}
 --- !u!4 &51841594
 Transform:

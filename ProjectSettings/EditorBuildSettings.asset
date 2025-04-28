@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: 866d0d5afacd68f4392af7f25de1bb36
   - enabled: 1
+    path: Assets/Scenes/Flashlight Minigame.unity
+    guid: 536f679f5e0fa7f40b7ed0fe956e79b8
+  - enabled: 1
     path: Assets/Scenes/Plane Minigame.unity
     guid: 1a2b9749c84c88443b6b563425645e56
   m_configObjects:

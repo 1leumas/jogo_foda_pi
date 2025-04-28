@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NewGame : MonoBehaviour
 {
-    public GameObject laodingScreen;
+    public GameObject loadingScreen;
     public Slider slider;
     
     public void LoadNewGame()
@@ -17,12 +17,11 @@ public class NewGame : MonoBehaviour
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(1);
 
-        laodingScreen.SetActive(true);
+        loadingScreen.SetActive(true);
 
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
-            Debug.Log(progress);
 
             slider.value = progress;
 
