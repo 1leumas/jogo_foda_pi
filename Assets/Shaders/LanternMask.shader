@@ -52,7 +52,7 @@ Shader "Unlit/LanternMask_UI_Corrected"
 
             fixed4 frag(v2f i) : SV_Target
             {
-                float2 screenUV = i.screenPos.xy / i.screenPos.w;
+                float2 screenUV = (i.screenPos.xy - float2(0.0, 0.5)) / i.screenPos.w;
                 screenUV = screenUV * 0.5 + 0.5; // 0~1
 
                 // Corrige o aspect ratio :

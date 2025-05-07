@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -5,8 +6,10 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance { get; private set; }
     public bool hasFlashlight;
     public int fuses;
+    public Transform fusesParent;
 
     private GameObject flashLight;
+    private List<GameObject> fuseList;
 
     void Awake()
     {
@@ -18,10 +21,17 @@ public class Inventory : MonoBehaviour
     {
         flashLight = transform.Find("Light").gameObject;
 
+        fuseList = new List<GameObject>();
         if (GameManager.Instance != null)
         {
             hasFlashlight = GameManager.Instance.hasFlashlight;
             fuses = GameManager.Instance.fuses;
+        }
+
+        foreach (Transform fuse in fusesParent)
+        {
+            fuseList.Add(fuse.gameObject);
+            fuse.gameObject.SetActive(false);
         }
     }
 
@@ -32,5 +42,23 @@ public class Inventory : MonoBehaviour
         {
             flashLight.SetActive(true);
         }
+
+        if (GameManager.Instance.gameState >= 5)
+        {
+            hasFlashlight = true;
+        }
+
+        for (int i = 0; i < fuses; i++)
+        {
+            if (!fuseList[i].activeSelf)
+            {
+                fuseList[i].SetActive(true);
+            }  
+        }
+    }
+
+    public void NewFuse()
+    {
+        fuses++;
     }
 }

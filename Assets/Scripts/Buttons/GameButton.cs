@@ -22,6 +22,7 @@ public class GameButton : MonoBehaviour, IButtonParameter
         if (targetGame != null)
         {
             GameManager.Instance.playerPosition = player.transform.position;
+            GameManager.Instance.playerRotation = player.transform.rotation.eulerAngles;
             GameManager.Instance.fuses = Inventory.Instance.fuses;
             GameManager.Instance.hasFlashlight = Inventory.Instance.hasFlashlight;
             GameManager.Instance.firstStart = false;

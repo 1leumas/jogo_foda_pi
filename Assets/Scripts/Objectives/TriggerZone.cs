@@ -24,4 +24,9 @@ public class TriggerZone : MonoBehaviour
             onExit.Invoke();
         }
     }
+
+    public void NextState()
+    {
+        GameManager.Instance.gameState++;
+    }
 }

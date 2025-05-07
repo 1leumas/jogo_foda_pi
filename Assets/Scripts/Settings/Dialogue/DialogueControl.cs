@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Globalization;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,7 +21,7 @@ public class DialogueControl : MonoBehaviour
     public TextMeshProUGUI speechText;
     public TextMeshProUGUI actorNametext;
     public Button skipButton;
-    public Button speechButton;
+    public Transform buttonsParent;
     public GameObject guideGhost;
 
     [Header("Settings")]
@@ -35,6 +35,7 @@ public class DialogueControl : MonoBehaviour
     private string[] names;
     private Sprite[] profiles;
     private Player player;
+    private List<GameObject> previouslyActiveButtons = new List<GameObject>();
 
     public static DialogueControl instance;
 
@@ -89,12 +90,16 @@ public class DialogueControl : MonoBehaviour
             {
                 guideGhost.SetActive(false);
             }
-            if (!isPlayerDialogue)
+            if (isPlayerDialogue)
             {
-                speechButton.gameObject.SetActive(true);    
-            }       
+                GameManager.Instance.SetState(state + 1);
+            }
+            foreach (GameObject button in previouslyActiveButtons)
+            {
+                button.SetActive(true);
+            }
+            previouslyActiveButtons.Clear();
             Waypoint.gameObject.SetActive(true);
-            GameManager.Instance.SetState(state + 1);
         }
     }
 
@@ -108,7 +113,15 @@ public class DialogueControl : MonoBehaviour
             profiles = img;
             state = nextState;
             skipButton.gameObject.SetActive(false);
-            speechButton.gameObject.SetActive(false);
+            previouslyActiveButtons.Clear();
+            foreach (Transform child in buttonsParent)
+            {
+                if (child.gameObject.activeSelf)
+                {
+                    previouslyActiveButtons.Add(child.gameObject);
+                    child.gameObject.SetActive(false);
+                }
+            }
             Waypoint.gameObject.SetActive(false);
 
             StartCoroutine(TypeSentence());

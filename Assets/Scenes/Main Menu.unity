@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -949,8 +949,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: novo jogo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 95dc4ceb60a8ec144b5dc1686226e726, type: 2}
-  m_sharedMaterial: {fileID: -1245396333647212469, guid: 95dc4ceb60a8ec144b5dc1686226e726, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b0e22936d11bcdc43beafa07344fbe60, type: 2}
+  m_sharedMaterial: {fileID: 9090966452512761690, guid: b0e22936d11bcdc43beafa07344fbe60, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -974,13 +974,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

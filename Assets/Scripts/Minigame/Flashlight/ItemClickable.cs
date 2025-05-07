@@ -13,6 +13,9 @@ public class ItemClickable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        manager.ClickItem(itemName, this);
+        if (manager.Playing)
+        {
+            manager.ClickItem(itemName, this);
+        }
     }
 }

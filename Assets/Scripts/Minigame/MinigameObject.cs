@@ -17,7 +17,7 @@ public class MinigameObject : MonoBehaviour
     }
     void Update()
     {
-        if (state == GameManager.Instance.gameState)
+        if (state <= GameManager.Instance.gameState)
         {
             transform.Find("Light").gameObject.SetActive(true);
             

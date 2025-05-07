@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e453bef00ae50c6479761df934291299, type: 3}
+  m_Name: PlayerDialogue_6
+  m_EditorClassIdentifier: 
+  actor: {fileID: 0}
+  state: 7
+  speakerSprite: {fileID: 0}
+  sentence: 
+  dialogues:
+  - actorName: Piloto Lima
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "O que temos aqui? Mais um recruta pronto pro servi\xE7o?"
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "\xD3timo... Mais fantasmas."
+  - actorName: Piloto Lima
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: Te cuida que esse fantasma tem nome.
+  - actorName: Piloto Lima
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Piloto Jos\xE9 Lima da For\xE7a \xC1erea Brasileira ao seu dispor,
+        tenho certeza que j\xE1 ouviu falar de mim."
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Eu n\xE3o."
+  - actorName: Piloto Lima
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Barbaridade. Essa gurizada de hoje em dia que s\xF3 fica no celular.
+        Enfim, no que eu posso te ajudar vivente?"
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Eu precisava encontrar tr\xEAs fus\xEDveis para abrir a sa\xEDda
+        dos fundos e ir embora."
+  - actorName: Piloto Lima
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Ent\xE3o hoje \xE9 teu dia de sorte! Tenho um que eu n\xE3o to
+        usando no meu avi\xE3o. Se tu me ajudar eu consigo tirar ele pra ti."
+  - actorName: Piloto Lima
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Mas muito cuidado pra n\xE3o arranhar a tinta, essa belezinha
+        \xE9 uma reliquia."

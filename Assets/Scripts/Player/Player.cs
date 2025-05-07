@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private Vector3 moveInput;
     private GameObject flashlight;
     private Rigidbody rb;
-    private bool _isTalking;
+    private bool _isTalking = false;
 
     public bool IsTalking { get => _isTalking; set => _isTalking = value; }
 
@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         if (GameManager.Instance != null && !GameManager.Instance.firstStart)
         {
             transform.position = GameManager.Instance.playerPosition;
+            transform.rotation = Quaternion.Euler(GameManager.Instance.playerRotation);
         }
     }
 
@@ -87,22 +88,5 @@ public class Player : MonoBehaviour
             Vector3 newPosition = rb.position + adjustedMove * moveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(newPosition);
         }
-    }
-
-    public void SetTalking(bool value)
-    {
-        IsTalking = value;
-    }
-
-    Vector3 StringToVector3(string str)
-    {
-        str = str.Trim('(', ')');
-        string[] values = str.Split(',');
-
-        return new Vector3(
-            float.Parse(values[0], System.Globalization.CultureInfo.InvariantCulture),
-            float.Parse(values[1], System.Globalization.CultureInfo.InvariantCulture),
-            float.Parse(values[2], System.Globalization.CultureInfo.InvariantCulture)
-        );
     }
 }

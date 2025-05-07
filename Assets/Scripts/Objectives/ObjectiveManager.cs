@@ -18,21 +18,13 @@ public class ObjectiveManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
 
         objectives = new Dictionary<int, Transform>();
 
         foreach (var obj in objectiveList)
         {
-            if (!objectives.ContainsKey(obj.id))
+            if (obj.target != null && !objectives.ContainsKey(obj.id))
             {
                 objectives.Add(obj.id, obj.target);
             }

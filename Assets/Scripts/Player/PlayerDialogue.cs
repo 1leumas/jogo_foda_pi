@@ -31,7 +31,6 @@ public class PlayerDialogue : MonoBehaviour
 
         if (currentDialogue == null)
         {
-            Debug.LogWarning("No dialogue found for state: " + GameManager.Instance.gameState);
             return;
         }
 

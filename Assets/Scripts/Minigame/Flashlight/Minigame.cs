@@ -1,25 +1,54 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using TMPro;
+using Unity.VisualScripting;
 
 public class FlashlightMinigame : MonoBehaviour
 {
     public List<Transform> slots;
     public List<GameObject> itemPrefabs;
+    public GameObject menuPanel;
+    public GameObject endgamePanel;
+    public TextMeshProUGUI endgameText;
     public Text itemNameText;
-    public int lives = 3;
+    public Transform livesObj;
+    public int lives;
 
     private List<GameObject> instantiatedItems = new List<GameObject>();
+    private List<GameObject> lifes = new List<GameObject>();
     private Queue<string> itemQueue = new Queue<string>();
     private string currentItem;
+    private bool playing = true;
+
+    public bool Playing { get => playing; set => playing = value; }
 
     void Start()
     {
-        StartGame();
+        foreach (Transform life in livesObj)
+        {
+            lifes.Add(life.gameObject);
+        }
     }
 
-    void StartGame()
+    public void GoBack()
     {
+        SceneManager.LoadScene("Game");
+    }
+
+    public void StartGame()
+    {
+        lives = 3;
+        foreach (Transform life in livesObj)
+        {
+            life.gameObject.SetActive(true);
+            lifes.Add(life.gameObject);
+        }
+        playing = true;
+        menuPanel.SetActive(false);
+        endgamePanel.SetActive(false);
+
         List<Transform> availableSlots = new List<Transform>(slots);
         List<GameObject> availableItems = new List<GameObject>(itemPrefabs);
 
@@ -45,6 +74,19 @@ public class FlashlightMinigame : MonoBehaviour
         NextItem();
     }
 
+    public void EndGame(bool victory)
+    {
+        endgamePanel.SetActive(true);
+
+        if (victory)
+        {
+            endgameText.text = "Vitória!";
+        }
+        else{
+            endgameText.text = "Derrota";
+        }
+    }
+
     public void NextItem()
     {
         if (itemQueue.Count > 0)
@@ -68,6 +110,8 @@ public class FlashlightMinigame : MonoBehaviour
         else
         {
             lives--;
+            lifes[lifes.Count -1].SetActive(false);
+            lifes.RemoveAt(lifes.Count - 1);
             if (lives <= 0)
             {
                 Lose();
@@ -78,10 +122,24 @@ public class FlashlightMinigame : MonoBehaviour
     void Win()
     {
         itemNameText.text = "You Win!";
+        playing = false;
+        EndGame(true);
+
+        if (GameManager.Instance.gameState == 3)
+        {      
+            GameManager.Instance.gameState++;
+        }
     }
 
     void Lose()
     {
         itemNameText.text = "You Lose!";
+        playing = false;
+        EndGame(false);
+        itemQueue.Clear();
+        foreach (GameObject obj in instantiatedItems)
+        {
+            Destroy(obj);
+        }
     }
 }

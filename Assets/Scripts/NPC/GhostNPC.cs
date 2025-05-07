@@ -4,6 +4,7 @@ public class GhostNPC : MonoBehaviour
 {
     public float floatSpeed;
     public float floatHeight;
+    public int id;
     private Vector3 startLocalPosition;
     private float timeCounter = 0;
 
