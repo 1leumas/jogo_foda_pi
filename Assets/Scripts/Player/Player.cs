@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     public float moveSpeed;
     public DynamicJoystick joystick;
+    public Vector3 moveInput;
     private float initialMoveSpeed;
-    private Vector3 moveInput;
     private GameObject flashlight;
     private Rigidbody rb;
     private bool _isTalking = false;
@@ -88,5 +89,11 @@ public class Player : MonoBehaviour
             Vector3 newPosition = rb.position + adjustedMove * moveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(newPosition);
         }
+    }
+
+    public void EndGame()
+    {
+        Destroy(GameManager.Instance);
+        SceneManager.LoadScene("Main Menu");
     }
 }

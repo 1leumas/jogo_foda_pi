@@ -4,6 +4,8 @@ using UnityEngine;
 public class ObjectiveManager : MonoBehaviour
 {
     public static ObjectiveManager Instance;
+    public GameObject endgamePanel;
+    public Player player;
 
     [System.Serializable]
     public class Objetivo
@@ -18,6 +20,8 @@ public class ObjectiveManager : MonoBehaviour
 
     void Awake()
     {
+        endgamePanel.SetActive(false);
+
         Instance = this;
 
         objectives = new Dictionary<int, Transform>();
@@ -35,5 +39,13 @@ public class ObjectiveManager : MonoBehaviour
     {
         objectives.TryGetValue(id, out Transform target);
         return target;
+    }
+
+    
+    public void TriggerEndgame(bool show)
+    {
+        endgamePanel.SetActive(show);
+        player.IsTalking = show;
+        player.joystick.OnPointerUp(null);
     }
 }

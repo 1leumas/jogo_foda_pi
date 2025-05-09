@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e453bef00ae50c6479761df934291299, type: 3}
+  m_Name: PlayerDialogue_13
+  m_EditorClassIdentifier: 
+  actor: {fileID: 0}
+  state: 21
+  speakerSprite: {fileID: 0}
+  sentence: 
+  dialogues:
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Com licen\xE7a?"
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: ...
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Coronel Guimar\xE3es?"
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "\xC9 Theodoro Guimar\xE3es tch\xEA... N\xE3o sou mais coronel."
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Sinto muito senhor, eu fiquei preso aqui no museu e precisava
+        de um fus\xEDvel pra poder sair."
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "A enfermeira Torres disse que voc\xEA tinha um. Poderia me dar
+        ele?"
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: E por que eu deveria?
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: Eu precisava meuito dele, tem algo que eu possa fazer para o senhor
+        em troca?
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "N\xE3o. A unica coisa que eu queria era conseguir dirigir meu
+        tanque de volta. Mas j\xE1 to velho demais pra isso."
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Bom... Se voc\xEA me ensinar a gente pode dar uma volta com ele.
+        Sempre quis dirigir um tanque."
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: ...
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Tu acha que consegue? Isso n\xE3o \xE9 coisa de pi\xE1 sem coragem."
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Que seja ent\xE3o."

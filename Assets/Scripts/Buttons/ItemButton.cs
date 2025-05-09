@@ -24,7 +24,7 @@ public class ItemButton : MonoBehaviour, IButtonParameter
             }
             else
             {
-                Inventory.Instance.fuses++;
+                GameManager.Instance.gameState++;
             }
             Destroy(targetItem.gameObject);
             gameObject.SetActive(false);

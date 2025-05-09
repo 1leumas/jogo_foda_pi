@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Radio Minigame.unity
     guid: 0d1864a38b34dd244b570dddbe6127b7
+  - enabled: 1
+    path: Assets/Scenes/Infirmary Minigame.unity
+    guid: fa29563051c2b2849809f1eb0e5e5f24
+  - enabled: 1
+    path: Assets/Scenes/Tank Minigame.unity
+    guid: e6cae705de2748e498a524b580a12bb9
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 6e46226d33858ea49be6a55a49efd980, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

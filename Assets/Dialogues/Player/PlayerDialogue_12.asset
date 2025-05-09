@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e453bef00ae50c6479761df934291299, type: 3}
+  m_Name: PlayerDialogue_12
+  m_EditorClassIdentifier: 
+  actor: {fileID: 0}
+  state: 19
+  speakerSprite: {fileID: 0}
+  sentence: 
+  dialogues:
+  - actorName: Enfermeira Torres
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "\xD3timo, com isso esse arranh\xE3o n\xE3o vai mais incomodar."
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Muito obrigado, inclusive voc\xEA podia me ajudar com uma coisa?"
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Eu preciso encontrar um fus\xEDvel para poder ir embora. Voc\xEA
+        sabe onde eu posso encontrar?"
+  - actorName: Enfermeira Torres
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Olha, se me lembro bem o coronel Guimar\xE3es tinha um na sala
+        do tanque onde ele fica. Mas tem um problema..."
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Mais um problema? O que \xE9?"
+  - actorName: Enfermeira Torres
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "O coronel n\xE3o tem estado de muito bom humor nos ultimos anos.
+        Fica o dia inteiro naquela sala resmungando sozinho."
+  - actorName: Enfermeira Torres
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Mas ele ainda \xE9 uma boa pessoa. Se voc\xEA conversar com ele
+        pode ser que ele te ajude. Vou abrir as portas pra voc\xEA querido."

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - FlashLight
+  - Fuse
   layers:
   - Default
   - TransparentFX

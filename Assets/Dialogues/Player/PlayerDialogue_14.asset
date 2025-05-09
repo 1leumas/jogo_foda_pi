@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e453bef00ae50c6479761df934291299, type: 3}
+  m_Name: PlayerDialogue_14
+  m_EditorClassIdentifier: 
+  actor: {fileID: 0}
+  state: 23
+  speakerSprite: {fileID: 0}
+  sentence: 
+  dialogues:
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: Puxa vida isso foi incrivel, o senhor devia ser muito bom nisso.
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: Sim... Eu era sim.
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Aqui pi\xE1, pode ficar com esse fus\xEDvel. N\xE3o preciso dele."
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: Finalmente posso ir embora, muito obrigado senhor.
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: Te adianta logo que teus pais devem ta te procurando.
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: Mas viu guri...
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Pois n\xE3o?"
+  - actorName: "Coronel Guimar\xE3es"
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: Se quiser dirigir essa lata velha de novo algum dia, sabe onde
+        me encontrar.
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: Sim senhor!

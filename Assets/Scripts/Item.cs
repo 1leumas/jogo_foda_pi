@@ -7,19 +7,14 @@ public class Item : MonoBehaviour
     public float floatHeight;
     public float dialogueRange;
     public LayerMask playerLayer;
-    public Sprite spriteSelec;
     public bool playerHit;
 
-    private Sprite spriteBase;
-    private SpriteRenderer spriteRenderer;
     private Vector3 startPosition;
     private float timeCounter = 0;
 
     void Start()
     {
         startPosition = transform.position;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteBase = spriteRenderer.sprite;
     }
 
     void Update()
@@ -41,8 +36,7 @@ public class Item : MonoBehaviour
         if (hit.Length > 0 && !playerHit)
         {
             playerHit = true;
-            timeCounter = -Mathf.PI / 2; // Evita resetar o tempo toda vez que o jogador é detectado
-            spriteRenderer.sprite = spriteSelec;
+            timeCounter = -Mathf.PI / 2;
 
             ButtonController.Instance.ActivateBtn("Item", this);
         }
@@ -50,7 +44,6 @@ public class Item : MonoBehaviour
         {
             playerHit = false;
             transform.position = startPosition;
-            spriteRenderer.sprite = spriteBase;
 
             ButtonController.Instance.DeactivateBtn();
         }

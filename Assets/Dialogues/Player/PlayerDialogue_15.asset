@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e453bef00ae50c6479761df934291299, type: 3}
+  m_Name: PlayerDialogue_15
+  m_EditorClassIdentifier: 
+  actor: {fileID: 0}
+  state: 25
+  speakerSprite: {fileID: 0}
+  sentence: 
+  dialogues:
+  - actorName: Recruta Martins
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "J\xE1 estava indo embora sem se despedir pi\xE1?"
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Claro que n\xE3o recruta, muito obrigado pela sua ajuda."
+  - actorName: Recruta Martins
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "Bem capaz tch\xEA, tu que fez o trabalho dificil."
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    sentence:
+      portuguese: "Ent\xE3o adeus, diz que eu dei tchau pro pessoal, at\xE9 outra
+        hora!"
+  - actorName: Recruta Martins
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "At\xE9 mais, boa sorte!"
