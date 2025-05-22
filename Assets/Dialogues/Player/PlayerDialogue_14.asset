@@ -18,7 +18,7 @@ MonoBehaviour:
   sentence: 
   dialogues:
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: Puxa vida isso foi incrivel, o senhor devia ser muito bom nisso.
   - actorName: "Coronel Guimar\xE3es"
@@ -30,7 +30,7 @@ MonoBehaviour:
     sentence:
       portuguese: "Aqui pi\xE1, pode ficar com esse fus\xEDvel. N\xE3o preciso dele."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: Finalmente posso ir embora, muito obrigado senhor.
   - actorName: "Coronel Guimar\xE3es"
@@ -42,7 +42,7 @@ MonoBehaviour:
     sentence:
       portuguese: Mas viu guri...
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Pois n\xE3o?"
   - actorName: "Coronel Guimar\xE3es"
@@ -51,6 +51,6 @@ MonoBehaviour:
       portuguese: Se quiser dirigir essa lata velha de novo algum dia, sabe onde
         me encontrar.
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: Sim senhor!

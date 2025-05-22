@@ -18,7 +18,7 @@ MonoBehaviour:
   sentence: 
   dialogues:
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "U\xE9, quem est\xE1 a\xED?"
   - actorName: Recruta Martins
@@ -27,7 +27,7 @@ MonoBehaviour:
       portuguese: "Recruta Martins se apresentado! N\xE3o te assusta n\xE3o pi\xE1,
         sou um dos fantasmas que moram aqui."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Caramba, fantasmas? N\xE3o sabia que esse museu era assombrado."
   - actorName: Recruta Martins
@@ -41,7 +41,7 @@ MonoBehaviour:
       portuguese: "E tu ta mais perdido que peido em bombacha n\xE9? N\xE3o viu que
         j\xE1 anoiteceu?"
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Acabei ficando preso aqui. Voc\xEA poderia me mostrar como sair?"
   - actorName: Recruta Martins

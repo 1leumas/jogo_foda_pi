@@ -22,11 +22,11 @@ MonoBehaviour:
     sentence:
       portuguese: "Salve rapaz, como vai a tua miss\xE3o?"
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Oi recruta, acabei de achar o segundo fus\xEDvel."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: Mas acabei arranhando o joelho nesse monte de ferro.
   - actorName: Recruta Martins

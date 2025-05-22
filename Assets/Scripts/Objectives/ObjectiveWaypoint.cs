@@ -21,7 +21,7 @@ public class ObjectiveWaypoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.gameState == 0)
+        if (GameManager.Instance.gameState == 0 || GameManager.Instance.gameState == 26)
         {
             waypoint.SetActive(false);
         }

@@ -23,7 +23,7 @@ MonoBehaviour:
       portuguese: "Barbaridade, tu voa melhor que quero-quero pi\xE1. Aqui est\xE1
         o seu fus\xEDvel."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Certo, s\xF3 faltam mais dois. Sabe onde eu posso encotrar os
         outros?"
@@ -31,9 +31,9 @@ MonoBehaviour:
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
       portuguese: "Anotaram o lugar de um dos fus\xEDveis nesse papel a alguns anos.
-        Mas ta em ingl\xEAs e eu n\xE3o sei nada de ingl\xEAs."
+        Mas ta tudo em c\xF3digos secretos."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: Perfeito... E agora.
   - actorName: Piloto Lima

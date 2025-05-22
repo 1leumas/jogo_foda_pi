@@ -18,7 +18,7 @@ MonoBehaviour:
   sentence: 
   dialogues:
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Com licen\xE7a?"
   - actorName: "Coronel Guimar\xE3es"
@@ -26,20 +26,20 @@ MonoBehaviour:
     sentence:
       portuguese: ...
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Coronel Guimar\xE3es?"
   - actorName: "Coronel Guimar\xE3es"
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: "\xC9 Theodoro Guimar\xE3es tch\xEA... N\xE3o sou mais coronel."
+      portuguese: "\xC9 Teodoro Guimar\xE3es tch\xEA... N\xE3o sou mais coronel."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Sinto muito senhor, eu fiquei preso aqui no museu e precisava
         de um fus\xEDvel pra poder sair."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "A enfermeira Torres disse que voc\xEA tinha um. Poderia me dar
         ele?"
@@ -48,7 +48,7 @@ MonoBehaviour:
     sentence:
       portuguese: E por que eu deveria?
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: Eu precisava meuito dele, tem algo que eu possa fazer para o senhor
         em troca?
@@ -58,7 +58,7 @@ MonoBehaviour:
       portuguese: "N\xE3o. A unica coisa que eu queria era conseguir dirigir meu
         tanque de volta. Mas j\xE1 to velho demais pra isso."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Bom... Se voc\xEA me ensinar a gente pode dar uma volta com ele.
         Sempre quis dirigir um tanque."

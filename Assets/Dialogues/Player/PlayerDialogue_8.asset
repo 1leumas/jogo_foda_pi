@@ -27,7 +27,7 @@ MonoBehaviour:
       portuguese: "Um civil acabou de invadir a esta\xE7\xE3o de r\xE1dio, nessecito
         refor\xE7os, c\xE2mbio."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Esse r\xE1dio n\xE3o funciona. Voc\xEA \xE9 maluco?"
   - actorName: Tenente Souza
@@ -41,7 +41,7 @@ MonoBehaviour:
       portuguese: "Agora te adianta no que tu precisa, um oficial r\xE1dio operador
         est\xE1 sempre ocupado, c\xE2mbio."
   - actorName: Jogador
-    profile: {fileID: 21300000, guid: 15125285c22a2b846b40759b56d93b8c, type: 3}
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: "Que seja... Eu preciso encotrar uns fus\xEDveis pra ir embora,
         e a unica pista que eu tenho \xE9 essa mensagem codificada."
