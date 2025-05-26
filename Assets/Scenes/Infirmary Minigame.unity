@@ -3431,7 +3431,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Segure em um dos objetos na parte de baixo para ver aonde ele deve ser
-    aplicado. Se colocar no luagr errado perde uma das tr\xEAs vidas."
+    aplicado. Se colocar no lugar errado perde uma das tr\xEAs vidas."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0e22936d11bcdc43beafa07344fbe60, type: 2}
   m_sharedMaterial: {fileID: 9090966452512761690, guid: b0e22936d11bcdc43beafa07344fbe60, type: 2}

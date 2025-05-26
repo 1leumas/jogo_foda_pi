@@ -20,7 +20,10 @@ public class RadioMinigame : MonoBehaviour
     [HideInInspector] public int score = 0;
 
     private List<GameObject> lifes = new List<GameObject>();
+    private List<string> usedWords = new List<string>();
+    private List<RectTransform> usedSlots = new List<RectTransform>();
     private bool playing;
+    private int sentenceIndex;
 
     public bool Playing { get => playing; set => playing = value; }
 
@@ -29,14 +32,6 @@ public class RadioMinigame : MonoBehaviour
         foreach (Transform life in livesObj)
         {
             lifes.Add(life.gameObject);
-        }
-    }
-
-    private void Update()
-    {
-        if (score >= 4 && playing)
-        {
-            Win();
         }
     }
 
@@ -50,40 +45,6 @@ public class RadioMinigame : MonoBehaviour
         lives = 3;
         score = 0;
 
-        GameObject answerSlot = GameObject.Find("Answer Slot");
-        GameObject questionSlot = GameObject.Find("Question Slot");
-        answerSlot.GetComponent<TextMeshProUGUI>().text = "";
-
-        int sentenceIndex = Random.Range(0, sentences.Count);
-        questionSlot.GetComponent<TextMeshProUGUI>().text = sentences[sentenceIndex];
-
-        string[] words = translatedSentences[sentenceIndex].Split(' ');
-
-        List<RectTransform> avaliableSlots = slots;
-
-        foreach (string word in words)
-        {
-            int slotIndex = Random.Range(0, avaliableSlots.Count);
-
-            GameObject currentWord = Instantiate(wordPrefab, slots[slotIndex].position, Quaternion.identity, slots[slotIndex]);
-            currentWord.GetComponent<SelectableWords>().word = word;
-            currentWord.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = word;
-
-            avaliableSlots.RemoveAt(slotIndex);
-        }
-
-        List<string> avaliablewords = randomWords;
-        foreach (RectTransform slot in avaliableSlots)
-        {
-            int wordIndex = Random.Range(0, avaliablewords.Count);
-
-            GameObject currentWord = Instantiate(wordPrefab, slot.position, Quaternion.identity, slot);
-            currentWord.GetComponent<SelectableWords>().word = avaliablewords[wordIndex];
-            currentWord.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = avaliablewords[wordIndex];
-
-            avaliablewords.RemoveAt(wordIndex);
-        }
-
         foreach (Transform life in livesObj)
         {
             life.gameObject.SetActive(true);
@@ -92,16 +53,111 @@ public class RadioMinigame : MonoBehaviour
         playing = true;
         menuPanel.SetActive(false);
         endgamePanel.SetActive(false);
+
+        LoadWords();
     }
 
-    public void Hit()
+    public void LoadWords()
     {
-        lives--;
-        lifes[lifes.Count - 1].SetActive(false);
-        lifes.RemoveAt(lifes.Count - 1);
-        if (lives <= 0)
+        usedWords.Clear();
+        usedSlots.Clear();
+
+        foreach (RectTransform slot in slots)
         {
-            Lose();
+            if (slot.transform.childCount > 0)
+            {
+                Destroy(slot.transform.GetChild(0).gameObject);
+            }
+        }
+
+        GameObject answerSlot = GameObject.Find("Answer Slot");
+        GameObject questionSlot = GameObject.Find("Question Slot");
+        answerSlot.GetComponent<TextMeshProUGUI>().text = "";
+
+        sentenceIndex = Random.Range(0, sentences.Count);
+        questionSlot.GetComponent<TextMeshProUGUI>().text = "";
+        questionSlot.GetComponent<TextMeshProUGUI>().text = sentences[sentenceIndex];
+
+        string[] words = translatedSentences[sentenceIndex].Split(' ');
+
+        List<RectTransform> avaliableSlots = new List<RectTransform>(slots);
+
+        foreach (string word in words)
+        {
+            int slotIndex = Random.Range(0, avaliableSlots.Count);
+
+            GameObject currentWord = Instantiate(wordPrefab, avaliableSlots[slotIndex].position, Quaternion.identity, avaliableSlots[slotIndex]);
+            currentWord.GetComponent<SelectableWords>().word = word;
+            currentWord.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = word;
+
+            usedWords.Add(word);
+            usedSlots.Add(avaliableSlots[slotIndex]);
+
+            avaliableSlots.RemoveAt(slotIndex);
+        }
+
+        List<string> avaliablewords = new List<string>(randomWords);
+        foreach (RectTransform slot in avaliableSlots)
+        {
+            int wordIndex = Random.Range(0, avaliablewords.Count);
+
+            GameObject currentWord = Instantiate(wordPrefab, slot.position, Quaternion.identity, slot);
+            currentWord.GetComponent<SelectableWords>().word = avaliablewords[wordIndex];
+            currentWord.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = avaliablewords[wordIndex];
+            
+            usedWords.Add(avaliablewords[wordIndex]);
+            usedSlots.Add(slot);
+
+            avaliablewords.RemoveAt(wordIndex);
+        }
+    }
+
+    public void Check()
+    {
+        GameObject answerSlot = GameObject.Find("Answer Slot");
+        string answerSentence = answerSlot.GetComponent<TextMeshProUGUI>().text;
+
+        if (answerSentence.Length > 0 && answerSentence.Substring(0, answerSentence.Length - 1) == translatedSentences[sentenceIndex])
+        {
+            score++;
+
+            if (score < 4)
+            {
+                LoadWords();
+            }
+            else
+            {
+                Win();
+            }
+        }
+        else
+        {
+            Reorganize();
+            lives--;
+            lifes[lifes.Count - 1].SetActive(false);
+            lifes.RemoveAt(lifes.Count - 1);
+            if (lives <= 0)
+            {
+                Lose();
+            }
+        }
+    }
+
+    public void Reorganize()
+    {
+        GameObject answerSlot = GameObject.Find("Answer Slot");
+        answerSlot.GetComponent<TextMeshProUGUI>().text = "";
+
+        for (int i = 0; i < usedSlots.Count; i++)
+        {
+            if (usedSlots[i].transform.childCount > 0)
+            {
+                Transform child = usedSlots[i].transform.GetChild(0);
+                Destroy(child.gameObject);
+            }
+            GameObject currentWord = Instantiate(wordPrefab, usedSlots[i].position, Quaternion.identity, usedSlots[i]);
+            currentWord.GetComponent<SelectableWords>().word = usedWords[i];
+            currentWord.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = usedWords[i];
         }
     }
 
@@ -124,7 +180,7 @@ public class RadioMinigame : MonoBehaviour
         playing = false;
         EndGame(true);
 
-        if (GameManager.Instance.gameState == 18)
+        if (GameManager.Instance.gameState == 14)
         {
             GameManager.Instance.gameState++;
         }
