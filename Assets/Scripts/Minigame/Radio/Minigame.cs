@@ -180,7 +180,7 @@ public class RadioMinigame : MonoBehaviour
         playing = false;
         EndGame(true);
 
-        if (GameManager.Instance.gameState == 14)
+        if (GameManager.Instance.gameState == 12)
         {
             GameManager.Instance.gameState++;
         }
