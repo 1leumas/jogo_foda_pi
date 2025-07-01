@@ -2139,7 +2139,7 @@ GameObject:
   - component: {fileID: 2465794671721103198}
   - component: {fileID: 1210036736879287001}
   m_Layer: 5
-  m_Name: Sair
+  m_Name: "Recome\xE7ar"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2246,7 +2246,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1288145372}
         m_TargetAssemblyTypeName: RadioMinigame, Assembly-CSharp
-        m_MethodName: GoBack
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2377,7 +2377,7 @@ GameObject:
   - component: {fileID: 1385745798137574587}
   - component: {fileID: 6039940380817907017}
   m_Layer: 5
-  m_Name: Iniciar
+  m_Name: Continuar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2918,7 +2918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Recome\xE7ar"
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0e22936d11bcdc43beafa07344fbe60, type: 2}
   m_sharedMaterial: {fileID: 9090966452512761690, guid: b0e22936d11bcdc43beafa07344fbe60, type: 2}
@@ -3266,7 +3266,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1288145372}
         m_TargetAssemblyTypeName: RadioMinigame, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: GoBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3347,7 +3347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Voltar
+  m_text: "Recome\xE7ar"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0e22936d11bcdc43beafa07344fbe60, type: 2}
   m_sharedMaterial: {fileID: 9090966452512761690, guid: b0e22936d11bcdc43beafa07344fbe60, type: 2}

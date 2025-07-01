@@ -8,6 +8,7 @@ TagManager:
   - Fuse
   - Enemy
   - Bruise
+  - Shoot
   layers:
   - Default
   - TransparentFX
