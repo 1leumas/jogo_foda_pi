@@ -20,8 +20,8 @@ MonoBehaviour:
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: <color=purple>How amazing</color> (Que incrivel), o senhor devia
-        ser muito bom nisso.
+      portuguese: <color=purple>That was awesome!</color> (Isso foi incrivel), o
+        senhor devia ser muito bom nisso.
   - actorName: "Coronel Guimar\xE3es"
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
