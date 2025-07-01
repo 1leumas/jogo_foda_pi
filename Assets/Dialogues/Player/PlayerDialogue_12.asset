@@ -17,10 +17,6 @@ MonoBehaviour:
   speakerSprite: {fileID: 0}
   sentence: 
   dialogues:
-  - actorName: Enfermeira Torres
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "\xD3timo, com isso esse arranh\xE3o n\xE3o vai mais incomodar."
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
@@ -28,24 +24,9 @@ MonoBehaviour:
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: "Eu preciso encontrar um fus\xEDvel para poder ir embora. Voc\xEA
-        sabe onde eu posso encontrar?"
+      portuguese: "Voc\xEA sabe onde tem um fus\xEDvel?"
   - actorName: Enfermeira Torres
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: "Olha, se me lembro bem o coronel Guimar\xE3es tinha um na sala
-        do tanque onde ele fica. Mas tem um problema..."
-  - actorName: Jogador
-    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
-    sentence:
-      portuguese: "Mais um problema? O que \xE9?"
-  - actorName: Enfermeira Torres
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "O coronel n\xE3o tem estado de muito bom humor nos ultimos anos.
-        Fica o dia inteiro naquela sala resmungando sozinho."
-  - actorName: Enfermeira Torres
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "Mas ele ainda \xE9 uma boa pessoa. Se voc\xEA conversar com ele
-        pode ser que ele te ajude. Vou abrir as portas pra voc\xEA querido."
+      portuguese: "O Coronel Guimar\xE3es tinha um <color=purple>in the room</color>
+        (na sala) do tanque."

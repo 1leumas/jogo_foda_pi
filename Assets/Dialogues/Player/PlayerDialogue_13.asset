@@ -20,14 +20,6 @@ MonoBehaviour:
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: "Com licen\xE7a?"
-  - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: ...
-  - actorName: Jogador
-    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
-    sentence:
       portuguese: "Coronel Guimar\xE3es?"
   - actorName: "Coronel Guimar\xE3es"
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
@@ -36,41 +28,9 @@ MonoBehaviour:
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: "Sinto muito senhor, eu fiquei preso aqui no museu e precisava
-        de um fus\xEDvel pra poder sair."
-  - actorName: Jogador
-    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
-    sentence:
-      portuguese: "A enfermeira Torres disse que voc\xEA tinha um. Poderia me dar
-        ele?"
+      portuguese: "<color=purple>Do you have</color> (Voc\xEA tem) um fus\xEDvel
+        a\xED?"
   - actorName: "Coronel Guimar\xE3es"
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: E por que eu deveria?
-  - actorName: Jogador
-    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
-    sentence:
-      portuguese: Eu precisava meuito dele, tem algo que eu possa fazer para o senhor
-        em troca?
-  - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "N\xE3o. A unica coisa que eu queria era conseguir dirigir meu
-        tanque de volta. Mas j\xE1 to velho demais pra isso."
-  - actorName: Jogador
-    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
-    sentence:
-      portuguese: "Bom... Se voc\xEA me ensinar a gente pode dar uma volta com ele.
-        Sempre quis dirigir um tanque."
-  - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: ...
-  - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "Tu acha que consegue? Isso n\xE3o \xE9 coisa de pi\xE1 sem coragem."
-  - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "Que seja ent\xE3o."
+      portuguese: "Sim, mas voc\xEA poderia me ajudar a dirigir meu tanque de volta?"
