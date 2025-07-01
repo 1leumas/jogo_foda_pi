@@ -24,9 +24,14 @@ MonoBehaviour:
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: "Voc\xEA pode me ajudar a achar um fus\xEDvel?"
+      portuguese: "Voc\xEA pode me ajudar a decifrar esse c\xF3digo?"
   - actorName: Tenente Souza
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: "<color=purple>I can help you</color> (Eu posso te ajudar) sim,
-        c\xE2mbio."
+      portuguese: "Um operador de r\xE1dio sempre est\xE1 disposto a decifrar mensagens
+        secretas."
+  - actorName: Tenente Souza
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "<color=purple>I can help you</color> (Eu posso te ajudar) se voc\xEA
+        me deixar trabalhar em paz, c\xE2mbio."

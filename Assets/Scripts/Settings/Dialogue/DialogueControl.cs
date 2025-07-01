@@ -25,7 +25,7 @@ public class DialogueControl : MonoBehaviour
     public GameObject guideGhost;
 
     [Header("Settings")]
-    public float typingSpeed;
+    public int animSpeed;
 
     private bool isShowing;
     private bool isPlayerDialogue;
@@ -54,10 +54,12 @@ public class DialogueControl : MonoBehaviour
 
     IEnumerator TypeSentence()
     {
-        foreach (char letter in sentences[index].ToCharArray())
+        speechText.rectTransform.position -= new Vector3(0, animSpeed, 0);
+        speechText.text = sentences[index];
+        for (int i = 0; i < animSpeed; i++)
         {
-            speechText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            speechText.rectTransform.position += new Vector3(0, 1, 0);
+            yield return new WaitForSeconds(.001f);
         }
         skipButton.gameObject.SetActive(true);
     }

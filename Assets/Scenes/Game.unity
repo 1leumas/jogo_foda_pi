@@ -2959,7 +2959,7 @@ MonoBehaviour:
   skipButton: {fileID: 510204399}
   buttonsParent: {fileID: 1001056402}
   guideGhost: {fileID: 4490564302182662250}
-  typingSpeed: 0.01
+  animSpeed: 30
 --- !u!1 &114566870
 GameObject:
   m_ObjectHideFlags: 0
