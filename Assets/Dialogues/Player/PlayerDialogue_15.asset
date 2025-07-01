@@ -24,9 +24,17 @@ MonoBehaviour:
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: "<color=purple>Of course not</color> (Claro que n\xE3o ) recruta,
-        muito obrigado pela sua ajuda."
+      portuguese: "Claro que n\xE3o recruta, muito obrigado pela sua ajuda."
   - actorName: Recruta Martins
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: <color=purple>Goodbye</color> (Adeus), boa sorte!
+      portuguese: "Bem capaz tch\xEA, tu que fez o trabalho dificil."
+  - actorName: Jogador
+    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
+    sentence:
+      portuguese: "Ent\xE3o adeus, diz que eu dei tchau pro pessoal, at\xE9 outra
+        hora!"
+  - actorName: Recruta Martins
+    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    sentence:
+      portuguese: "At\xE9 mais, boa sorte!"

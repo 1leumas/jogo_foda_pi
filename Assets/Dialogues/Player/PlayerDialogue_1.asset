@@ -20,14 +20,13 @@ MonoBehaviour:
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: "<color=purple>What time is it?</color> (que horas s\xE3o?) J\xE1
-        anoiteceu?"
+      portuguese: "Que horas s\xE3o? J\xE1 anoiteceu?"
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: "<color=purple>Wow, dude!</color> (Bah, tch\xEA!), acho que fiquei
-        muito tempo no banheiro. O museu j\xE1 est\xE1 fechado."
+      portuguese: "Caramba acho que fiquei muito tempo no banheiro. O museu j\xE1
+        est\xE1 fechado."
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: "Melhor eu ir logo <color=purple>To the exit</color> (para a sa\xEDda)."
+      portuguese: "Espero que ainda tenha alguem aqui! Melhor eu ir logo para a sa\xEDda."
