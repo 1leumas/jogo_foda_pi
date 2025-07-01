@@ -20,7 +20,8 @@ MonoBehaviour:
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: Puxa vida isso foi incrivel, o senhor devia ser muito bom nisso.
+      portuguese: <color=purple>How amazing</color> (Que incrivel), o senhor devia
+        ser muito bom nisso.
   - actorName: "Coronel Guimar\xE3es"
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
@@ -28,29 +29,8 @@ MonoBehaviour:
   - actorName: "Coronel Guimar\xE3es"
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: "Aqui pi\xE1, pode ficar com esse fus\xEDvel. N\xE3o preciso dele."
+      portuguese: "Aqui pi\xE1, pode ficar com esse <color=purple>fuse</color> (fus\xEDvel). "
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
       portuguese: Finalmente posso ir embora, muito obrigado senhor.
-  - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: Te adianta logo que teus pais devem ta te procurando.
-  - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: Mas viu guri...
-  - actorName: Jogador
-    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
-    sentence:
-      portuguese: "Pois n\xE3o?"
-  - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: Se quiser dirigir essa lata velha de novo algum dia, sabe onde
-        me encontrar.
-  - actorName: Jogador
-    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
-    sentence:
-      portuguese: Sim senhor!
