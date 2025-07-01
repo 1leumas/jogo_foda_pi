@@ -20,8 +20,8 @@ MonoBehaviour:
   - actorName: Recruta Martins
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: "O port\xE3o <color=purple>It\u2019s without power</color> (est\xE1
-        sem energia), tu n\xE3o vai conseguir abrir."
+      portuguese: "O port\xE3o <color=purple>has no power</color> (n\xE3o tem energia),
+        tu n\xE3o vai conseguir abrir."
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
