@@ -20,38 +20,13 @@ MonoBehaviour:
   - actorName: Tenente Souza
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: "Tenente Jairo Souza pra base, responda, c\xE2mbio."
-  - actorName: Tenente Souza
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "Um civil acabou de invadir a esta\xE7\xE3o de r\xE1dio, nessecito
-        refor\xE7os, c\xE2mbio."
+      portuguese: "Tenente Jairo Souza para base, responda, c\xE2mbio."
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
-      portuguese: "Esse r\xE1dio n\xE3o funciona. Voc\xEA \xE9 maluco?"
+      portuguese: "Voc\xEA pode me ajudar a achar um fus\xEDvel?"
   - actorName: Tenente Souza
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: "Ora essa, n\xE3o sou maluco pi\xE1, sou um R\xE1dio Operador,
+      portuguese: "<color=purple>I can help you</color> (Eu posso te ajudar) sim,
         c\xE2mbio."
-  - actorName: Tenente Souza
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "Agora te adianta no que tu precisa, um oficial r\xE1dio operador
-        est\xE1 sempre ocupado, c\xE2mbio."
-  - actorName: Jogador
-    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
-    sentence:
-      portuguese: "Que seja... Eu preciso encotrar uns fus\xEDveis pra ir embora,
-        e a unica pista que eu tenho \xE9 essa mensagem codificada."
-  - actorName: Tenente Souza
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "Aah, eu conhe\xE7o esse tipo de c\xF3digo, \xE9 \xF3timo pra mandar
-        mensagens secretas, c\xE2mbio."
-  - actorName: Tenente Souza
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "Certo, mesmo voc\xEA me chamando de maluco eu te ajudo a decifrar
-        se voc\xEA me deixar trabalhar em paz. Combinado? c\xE2mbio."

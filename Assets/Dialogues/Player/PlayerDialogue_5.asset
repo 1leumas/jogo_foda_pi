@@ -20,20 +20,8 @@ MonoBehaviour:
   - actorName: Recruta Martins
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: Bah, ai se foi o boi com as cordas.
-  - actorName: Jogador
-    profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
-    sentence:
-      portuguese: O que?
-  - actorName: Recruta Martins
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: Quis dizer que temos um problema.
-  - actorName: Recruta Martins
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
-    sentence:
-      portuguese: "O port\xE3o ta sem energia, tu n\xE3o vai conseguir abrir ele
-        desse jeito."
+      portuguese: "O port\xE3o <color=purple>It\u2019s without power</color> (est\xE1
+        sem energia), tu n\xE3o vai conseguir abrir."
   - actorName: Jogador
     profile: {fileID: 21300000, guid: b1b6712a82eedaf4182a0ef7adf54c2c, type: 3}
     sentence:
@@ -41,10 +29,9 @@ MonoBehaviour:
   - actorName: Recruta Martins
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: "Te acalma pi\xE1. Esse port\xE3o precisa de tr\xEAs fus\xEDveis
-        pra funcionar."
+      portuguese: "Ele precisa de tr\xEAs fus\xEDveis pra abrir."
   - actorName: Recruta Martins
     profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
     sentence:
-      portuguese: "Eu n\xE3o fa\xE7o ideia de onde eles possam estar. Mas pra tua
-        sorte conhe\xE7o alguem que pode saber."
+      portuguese: "<color=purple>for your luck</color> (para a sua sorte) conhe\xE7o
+        alguem que pode saber onde eles est\xE3o"
