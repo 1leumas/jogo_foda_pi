@@ -671,25 +671,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 885872329659552761, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
-      propertyPath: m_Name
-      value: "Recome\xE7ar"
-      objectReference: {fileID: 0}
     - target: {fileID: 1210036736470496896, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2605830004070462305}
     - target: {fileID: 1210036736470496896, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartGame
+      value: GoBack
       objectReference: {fileID: 0}
     - target: {fileID: 1210036736470496896, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlaneMinigame, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2324080895210952425, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
-      propertyPath: m_Name
-      value: Continuar
       objectReference: {fileID: 0}
     - target: {fileID: 3070658961011036604, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
       propertyPath: m_text
@@ -799,17 +791,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlaneMinigame, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 5414656450400932924, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
-      propertyPath: m_text
-      value: Continuar
-      objectReference: {fileID: 0}
     - target: {fileID: 6039940378811150608, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2605830004070462305}
     - target: {fileID: 6039940378811150608, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoBack
+      value: StartGame
       objectReference: {fileID: 0}
     - target: {fileID: 6039940378811150608, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -825,7 +813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632597145554484918, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
       propertyPath: m_text
-      value: "Recome\xE7ar"
+      value: Voltar
       objectReference: {fileID: 0}
     - target: {fileID: 6638091295771189943, guid: bd70b026b82f43346ba5f5a7a4466fab, type: 3}
       propertyPath: m_SizeDelta.y
