@@ -22,11 +22,11 @@ MonoBehaviour:
     sentence:
       portuguese: "\xD3timo... Mais fantasmas."
   - actorName: Piloto Lima
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 5903935af47d3f94c9dc462fdaf84570, type: 3}
     sentence:
       portuguese: Pro teu governo esse fantasma tem nome.
   - actorName: Piloto Lima
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 5903935af47d3f94c9dc462fdaf84570, type: 3}
     sentence:
       portuguese: "Piloto Jos\xE9 Lima da For\xE7a \xC1erea Brasileira ao seu dispor.
         No que posso ajudar?"
@@ -36,7 +36,7 @@ MonoBehaviour:
       portuguese: "<color=purple>I need to find</color> (Eu preciso encontrar) tr\xEAs
         fus\xEDveis para abrir a sa\xEDda dos fundos."
   - actorName: Piloto Lima
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 5903935af47d3f94c9dc462fdaf84570, type: 3}
     sentence:
       portuguese: "Ent\xE3o hoje \xE9 teu dia de sorte! <color=purple>I have one
         here</color> (Tenho um aqui!) no meu avi\xE3o."

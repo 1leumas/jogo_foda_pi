@@ -20,7 +20,11 @@ public class InfirmaryMinigame : MonoBehaviour
     private List<GameObject> lifes = new List<GameObject>();
     private bool playing;
 
-    public bool Playing { get => playing; set => playing = value; }
+    public bool Playing
+    {
+        get => playing;
+        set => playing = value;
+    }
 
     void Start()
     {
@@ -30,7 +34,8 @@ public class InfirmaryMinigame : MonoBehaviour
         }
     }
 
-    private void Update() {
+    private void Update()
+    {
         if (score >= 4 && playing)
         {
             Win();
@@ -54,10 +59,11 @@ public class InfirmaryMinigame : MonoBehaviour
         }
 
         foreach (Transform life in livesObj)
-            {
-                life.gameObject.SetActive(true);
-                lifes.Add(life.gameObject);
-            }
+        {
+            life.gameObject.SetActive(true);
+            lifes.Add(life.gameObject);
+        }
+
         playing = true;
         menuPanel.SetActive(false);
         endgamePanel.SetActive(false);

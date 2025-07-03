@@ -26,7 +26,7 @@ MonoBehaviour:
     sentence:
       portuguese: "Eu precisava encontrar um fus\xEDvel para ir embora."
   - actorName: Enfermeira Torres
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 2b9dc07872a1a1043b6a4d4d93128f6f, type: 3}
     sentence:
       portuguese: "O Coronel Guimar\xE3es tinha um <color=purple>in the tank room</color>
         (na sala do tanque). Ele \xE9 meio rabugento mas pode ser que te ajude."

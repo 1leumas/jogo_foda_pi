@@ -23,7 +23,7 @@ MonoBehaviour:
       portuguese: "Aqui diz <color=purple>behind the buried tank</color> (Atr\xE1s
         do tanque enterrado)."
   - actorName: Tenente Souza
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 20687c18a80e1804c8ba884ed448a87a, type: 3}
     sentence:
       portuguese: "Isso fica na \xE1rea de fora, vou abrir as portas para voc\xEA
         c\xE2mbio."

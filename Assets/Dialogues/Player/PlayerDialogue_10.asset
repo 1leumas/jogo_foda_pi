@@ -18,7 +18,7 @@ MonoBehaviour:
   sentence: 
   dialogues:
   - actorName: Recruta Martins
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 0f02e02f477b5c14283d5abe1939923a, type: 3}
     sentence:
       portuguese: "Salve rapaz, como vai a tua miss\xE3o?"
   - actorName: Jogador
@@ -27,7 +27,7 @@ MonoBehaviour:
       portuguese: "Oi recruta, achei mais um fus\xEDvel mas acabei arranhando o joelho
         nesse monte de ferro."
   - actorName: Recruta Martins
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 0f02e02f477b5c14283d5abe1939923a, type: 3}
     sentence:
       portuguese: "<color=purple>Wounded soldier?</color>(Soldado ferido?) \xC9 melhor
         tu ir falar com a enfermeira Torres, ela fica na enfermaria aqui perto."

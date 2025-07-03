@@ -22,7 +22,7 @@ MonoBehaviour:
     sentence:
       portuguese: "Coronel Guimar\xE3es?"
   - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: e78960b0563490641b1414b73a1b0517, type: 3}
     sentence:
       portuguese: "\xC9 Teodoro Guimar\xE3es tch\xEA... N\xE3o sou mais coronel."
   - actorName: Jogador
@@ -31,7 +31,7 @@ MonoBehaviour:
       portuguese: "<color=purple>Sorry</color> (Desculpa) mas eu precisava de um
         fus\xEDvel para ir embora, voc\xEA pode me ajudar?"
   - actorName: "Coronel Guimar\xE3es"
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: e78960b0563490641b1414b73a1b0517, type: 3}
     sentence:
       portuguese: "Porque eu deveria? J\xE1 to velho e cansado, s\xF3 queria conseguir
         dirigir meu tanque de novo."

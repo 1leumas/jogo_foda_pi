@@ -18,7 +18,7 @@ MonoBehaviour:
   sentence: 
   dialogues:
   - actorName: Tenente Souza
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 20687c18a80e1804c8ba884ed448a87a, type: 3}
     sentence:
       portuguese: "Tenente Jairo Souza para base, responda, c\xE2mbio."
   - actorName: Jogador
@@ -26,12 +26,12 @@ MonoBehaviour:
     sentence:
       portuguese: "Voc\xEA pode me ajudar a decifrar esse c\xF3digo?"
   - actorName: Tenente Souza
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 20687c18a80e1804c8ba884ed448a87a, type: 3}
     sentence:
       portuguese: "Um operador de r\xE1dio sempre est\xE1 disposto a decifrar mensagens
         secretas."
   - actorName: Tenente Souza
-    profile: {fileID: 21300000, guid: 16684b600e285df4f8d6407d5b6476e9, type: 3}
+    profile: {fileID: 21300000, guid: 20687c18a80e1804c8ba884ed448a87a, type: 3}
     sentence:
       portuguese: "<color=purple>I can help you</color> (Eu posso te ajudar) se voc\xEA
         me deixar trabalhar em paz, c\xE2mbio."
