@@ -7,6 +7,7 @@ public class NewGame : MonoBehaviour
 {
     public GameObject loadingScreen;
     public Slider slider;
+    public Image title;
     
     public void LoadNewGame()
     {
@@ -16,7 +17,8 @@ public class NewGame : MonoBehaviour
     IEnumerator LoadAsync ()
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(1);
-
+        
+        title.gameObject.SetActive(false);
         loadingScreen.SetActive(true);
 
         while (!operation.isDone)
