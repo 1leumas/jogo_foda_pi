@@ -30,4 +30,4 @@ MonoBehaviour:
     profile: {fileID: 21300000, guid: 0f02e02f477b5c14283d5abe1939923a, type: 3}
     sentence:
       portuguese: "<color=purple>Wounded soldier?</color>(Soldado ferido?) \xC9 melhor
-        tu ir falar com a enfermeira Torres, ela fica na enfermaria aqui perto."
+        tu ir falar com a enfermeira Torres."

@@ -4,19 +4,19 @@ public class PlayerAnim : MonoBehaviour
 {
     public DynamicJoystick joystick;
 
-    private GameObject player;
+    private Player player;
     private float angle = 5;
     private Animator anim;
 
     void Start()
     {
-        player = gameObject;
+        player = gameObject.GetComponent<Player>();
         anim = gameObject.GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (joystick.Direction.sqrMagnitude > 0.01f)
+        if (joystick.Direction.sqrMagnitude > 0.01f && !player.IsTalking)
         {
             Vector2 direction = joystick.Direction;
             angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
