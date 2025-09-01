@@ -64,7 +64,7 @@ public class TankMinigame : MonoBehaviour
             {
                 movement.direction = Vector3.left;
             }
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
             Destroy(shape);
         }
     }
@@ -127,7 +127,7 @@ public class TankMinigame : MonoBehaviour
         {
             score++;
 
-            if (score >= 6)
+            if (score >= 4)
             {
                 Win();
             }

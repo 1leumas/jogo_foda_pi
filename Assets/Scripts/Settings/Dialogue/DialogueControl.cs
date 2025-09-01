@@ -54,15 +54,27 @@ public class DialogueControl : MonoBehaviour
 
     IEnumerator TypeSentence()
     {
-        speechText.rectTransform.position -= new Vector3(0, animSpeed, 0);
+        Vector3 startPos = speechText.rectTransform.position - new Vector3(0, animSpeed, 0);
+        Vector3 endPos = speechText.rectTransform.position;
+        speechText.rectTransform.position = startPos;
+
         speechText.text = sentences[index];
-        for (int i = 0; i < animSpeed; i++)
+
+        float elapsed = 0f;
+        float duration = 0.3f;
+
+        while (elapsed < duration)
         {
-            speechText.rectTransform.position += new Vector3(0, 1, 0);
-            yield return new WaitForSeconds(.001f);
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            speechText.rectTransform.position = Vector3.Lerp(startPos, endPos, t);
+            yield return null;
         }
+
+        speechText.rectTransform.position = endPos;
         skipButton.gameObject.SetActive(true);
     }
+
 
     public void NextSentence()
     {
